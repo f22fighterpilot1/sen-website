@@ -1,0 +1,254 @@
+/* =========================================================
+   SEN Theme — Layout + Components
+   ========================================================= */
+
+/* Container */
+.container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Utility */
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(10px);
+}
+
+/* App shell */
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    padding: 72px 0 56px;
+}
+
+/* ================= NAV ================= */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(7, 10, 16, 0.7);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 0;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+}
+
+.brand-mark {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
+    box-shadow: 0 0 18px rgba(79, 140, 255, 0.45);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* HARD fallback spacing */
+.nav-links a + a {
+    margin-left: 12px;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    font-weight: 650;
+    transition: transform 120ms ease, background 120ms ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    border-color: rgba(79, 140, 255, 0.35);
+    background: radial-gradient(
+            120% 160% at 30% 10%,
+            rgba(79, 140, 255, 0.45),
+            rgba(124, 92, 255, 0.18)
+    );
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    padding: 80px 0 48px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+}
+
+.lead {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 56ch;
+    margin-bottom: 28px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.metric {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.metric-k {
+    font-weight: 700;
+}
+
+.metric-v {
+    font-size: 13px;
+    color: var(--faint);
+}
+
+/* ================= PIPELINE PANEL ================= */
+
+.hero-panel {
+    padding: 22px;
+    background:
+            linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)),
+            var(--panel);
+}
+
+.pipeline {
+    display: grid;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.pipe-step {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.pipe-badge {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-weight: 800;
+    background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
+}
+
+.pipe-desc {
+    font-size: 13px;
+    color: var(--faint);
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+    margin-top: 80px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 24px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    border-top: 1px solid var(--border);
+    background: rgba(7, 10, 16, 0.65);
+    backdrop-filter: blur(14px);
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    font-size: 13px;
+    color: var(--faint);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 920px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .hero-metrics {
+        grid-template-columns: 1fr;
+    }
+}
