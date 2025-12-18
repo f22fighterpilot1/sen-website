@@ -4,6 +4,11 @@
    SymbolicEngine (SEN) — Global Styles
    Base variables, resets, typography, background
    ========================================================= */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
 
 
 :root {
@@ -43,9 +48,8 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
+* {
+  max-width: 100%;
 }
 
 body {
