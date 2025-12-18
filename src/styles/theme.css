@@ -6,7 +6,8 @@
 .container {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 16px;   /* smaller padding for mobile */
+    width: 100%;       /* ← THIS is the important part */
 }
 
 /* Utility */
@@ -38,6 +39,9 @@
     background: rgba(7, 10, 16, 0.7);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
+
+    /* iOS notch / safe area */
+    padding-top: env(safe-area-inset-top);
 }
 
 .nav-inner {
@@ -45,8 +49,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 14px;
-    padding: 14px 0;
+
+    /* make it feel less skinny */
+    min-height: 64px;
+    padding: 10px 0; /* instead of 14px 0 */
 }
+
 
 .brand {
     display: inline-flex;
@@ -121,6 +129,122 @@
             rgba(124, 92, 255, 0.18)
     );
 }
+
+/* Desktop vs Mobile */
+.desktop { display: flex; }
+.mobile { display: none; }
+
+.icon-btn {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text);
+    border-radius: 14px;
+
+    /* tap target */
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.86);
+    position: relative;
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.86);
+    transition: transform 140ms ease, top 140ms ease, opacity 140ms ease;
+}
+
+.burger::before { top: -7px; }
+.burger::after { top: 7px; }
+
+.burger[data-open="true"] {
+    background: transparent;
+}
+.burger[data-open="true"]::before { top: 0; transform: rotate(45deg); }
+.burger[data-open="true"]::after { top: 0; transform: rotate(-45deg); }
+
+/* Mobile sheet */
+.mobile-sheet {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.62);   /* slightly stronger dim */
+    backdrop-filter: blur(10px);        /* stronger blur */
+    z-index: 60;
+
+    /* make it behave like an overlay container */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: calc(env(safe-area-inset-top) + 10px);
+}
+
+.mobile-sheet-inner {
+    /* stop being full-width */
+    width: min(560px, calc(100vw - 24px));
+    margin: 0;                          /* handled by width calc */
+
+    border: 1px solid rgba(255,255,255,0.14); /* slightly stronger border */
+    background: rgba(15, 18, 30, 0.96);        /* slightly more opaque */
+    border-radius: 18px;
+    padding: 16px;
+
+    box-shadow: 0 24px 80px rgba(0,0,0,0.55);
+}
+
+
+.mobile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.mobile-title {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.mobile-links {
+    display: grid;
+    gap: 10px;
+    padding: 14px 0;
+}
+
+.mobile-link {
+    padding: 14px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+}
+
+.mobile-link:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.mobile-cta {
+    display: grid;
+    gap: 10px;
+    padding-top: 10px;
+}
+
 
 /* ================= HERO ================= */
 
@@ -251,4 +375,39 @@
     .hero-metrics {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 768px) {
+    .desktop { display: none; }
+    .mobile { display: inline-flex; }
+
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero {
+        padding: 56px 0 36px;
+    }
+
+    .hero-grid {
+        width: 100%;
+        overflow-x: hidden;
+        gap: 22px;
+    }
+
+    .hero-metrics {
+        gap: 12px;
+    }
+}
+
+
+
+.hero-panel,
+.pipe-step,
+.metric {
+    min-width: 0;
+}
+
+@media (min-width: 769px) {
+    .mobile { display: none !important; }
 }
