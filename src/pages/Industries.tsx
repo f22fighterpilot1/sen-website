@@ -9,7 +9,7 @@ const cards: IndustryCard[] = [
   {
     title: "Aerospace and Defense",
     description:
-      "Improve collaboration across systems and data to deliver safer, more connected care.",
+      "Deterministic recognition of symbols, markings, and schematics for safety-critical and classified systems.",
     href: "#healthcare",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -23,7 +23,7 @@ const cards: IndustryCard[] = [
     {
     title: "Financial services",
     description:
-      "Build fast, secure experiences while meeting strict regulatory requirements across your stack.",
+      "Exact, auditable recognition of forms, signatures, and stamps to meet regulatory and compliance requirements.",
     href: "#financial",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -37,7 +37,7 @@ const cards: IndustryCard[] = [
   {
     title: "Manufacturing",
     description:
-      "Modernize legacy systems, reduce downtime, and accelerate operations from factory to cloud.",
+      "Structure-based identification of part markings and serials for reliable inspection under noise, wear, and variation.",
     href: "#manufacturing",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -51,7 +51,7 @@ const cards: IndustryCard[] = [
   {
     title: "Healthcare",
     description:
-      "Improve collaboration across systems and data to deliver safer, more connected care.",
+      "Deterministic interpretation in clinical workflows, providing more connected care.",
     href: "#healthcare",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -65,7 +65,7 @@ const cards: IndustryCard[] = [
   {
     title: "Media and entertainment",
     description:
-      "Deliver high-quality experiences across every screen with reliable, deterministic workflows.",
+      "Consistent recognition for graphics across rendering styles and resolutions.",
     href: "#media",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -79,7 +79,7 @@ const cards: IndustryCard[] = [
   {
     title: "Retail",
     description:
-      "Meet customers everywhere with fast, consistent digital experiences online and off.",
+      "Reliable identification across stores, devices, and channels.",
     href: "#retail",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -93,7 +93,7 @@ const cards: IndustryCard[] = [
   {
     title: "Telecom",
     description:
-      "Modernize legacy systems, reduce downtime, and accelerate operations from factory to cloud.",
+      "Interpretation of network diagrams and visual identifiers used in infrastructure planning and operations.",
     href: "#manufacturing",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -107,7 +107,7 @@ const cards: IndustryCard[] = [
   {
     title: "Communications and Media",
     description:
-      "Deliver high-quality experiences across every screen with reliable, deterministic workflows.",
+      "Exact understanding of symbols and diagrams in publishing, moderation, and distribution pipelines.",
     href: "#media",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -121,7 +121,7 @@ const cards: IndustryCard[] = [
   {
     title: "Energy and Utilities",
     description:
-      "Enable secure modernization while improving service delivery and operational visibility.",
+      "Predictable recognition in safety-critical infrastructure environments.",
     href: "#public",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -135,7 +135,7 @@ const cards: IndustryCard[] = [
   {
     title: "Higher Education",
     description:
-      "Meet customers everywhere with fast, consistent digital experiences online and off.",
+      "Deterministic assistance for teaching, research, and reproducible analysis.",
     href: "#retail",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
