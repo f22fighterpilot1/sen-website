@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 const links = [
     { to: "/", label: "Home" },
     { to: "/how-it-works", label: "How it works" },
+    { to: "/industries", label: "Industries" },
     //{ to: "/demo", label: "Demo" },
-    { to: "/contact", label: "Contact" },
+    { to: "/pricing", label: "Pricing" },
+    { to: "/support", label: "Support" },
 ];
 
 export default function Navbar() {

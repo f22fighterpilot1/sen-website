@@ -3,7 +3,9 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
 import HowItWorks from "./pages/HowItWorks";
-import Contact from "./pages/Contact";
+import Industries from "./pages/Industries";
+import Pricing from "./pages/Pricing";
+import Support from "./pages/Support";
 
 export default function App() {
     return (
@@ -12,7 +14,9 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/demo" element={<Demo />} />
                 <Route path="/how-it-works" element={<HowItWorks />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/industries" element={<Industries />} />
+                <Route path="/pricing" element={<Pricing />} />
             </Route>
         </Routes>
     );

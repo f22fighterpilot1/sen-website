@@ -1,7 +1,7 @@
-export default function Contact() {
+export default function Support() {
     return (
         <section className="page">
-            <h1>Contact</h1>
+            <h1>Support</h1>
             <p>
                 Interested in pilots, licensing, or research collaboration?
             </p>

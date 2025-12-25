@@ -34,7 +34,7 @@ export default function Home() {
                         Perceptual AI Infrastructure • Deterministic • Explainable
                     </div>
 
-                    <h1>Perceptual AI, Done Deterministically.</h1>
+                    <h1>The world’s first fully deterministic AI system.</h1>
 
                     <p className="lead">
                         SymbolicEngine (SEN) is a geometry-aware perceptual system that recognizes symbols by
