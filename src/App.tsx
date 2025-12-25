@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import SecondHome from "./pages/SecondHome";
 import Demo from "./pages/Demo";
 import HowItWorks from "./pages/HowItWorks";
 import Industries from "./pages/Industries";
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
             <Route element={<Layout />}>
                 <Route path="/" element={<Home />} />
+                <Route path="/secondHome" element={<SecondHome />} />
                 <Route path="/demo" element={<Demo />} />
                 <Route path="/how-it-works" element={<HowItWorks />} />
                 <Route path="/support" element={<Support />} />

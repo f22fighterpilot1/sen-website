@@ -842,3 +842,234 @@
     max-width: 100%;
   }
 }
+/* ================= HOME v2 ================= */
+
+.home2 {
+  padding: 44px 0 24px;
+}
+
+.home2-hero {
+  padding: 34px 0 32px;
+}
+
+.home2-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.home2-title {
+  font-size: clamp(2.6rem, 5vw, 4.1rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.home2-sub {
+  max-width: 62ch;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  color: var(--muted);
+}
+
+.home2-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.home2-visual {
+  padding: 18px;
+  min-height: 330px;
+  background:
+    radial-gradient(680px 420px at 70% 25%, rgba(124,92,255,0.25), transparent 55%),
+    radial-gradient(520px 360px at 25% 70%, rgba(79,140,255,0.22), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+}
+
+.home2-visual-inner {
+  position: relative;
+  height: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.22);
+  overflow: hidden;
+}
+
+.home2-visual-chip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+}
+
+.home2-visual-panel {
+  position: absolute;
+  right: 16px;
+  top: 60px;
+  width: 56%;
+  height: 56%;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+}
+
+.home2-visual-panel.small {
+  left: 16px;
+  top: 86px;
+  width: 38%;
+  height: 28%;
+}
+
+.home2-visual-panel.tiny {
+  left: 16px;
+  bottom: 16px;
+  width: 50%;
+  height: 22%;
+}
+
+.home2-logo-row {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.home2-logo-label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+  margin-bottom: 10px;
+}
+
+.home2-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.home2-logo {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  opacity: 0.9;
+}
+
+/* Sections */
+.home2-section {
+  margin-top: 72px;
+}
+
+.home2-section-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.home2-h2 {
+  margin-bottom: 14px;
+}
+
+.home2-p {
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+/* Mini cards (4) */
+.home2-mini-cards {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.home2-mini {
+  padding: 16px;
+  background: rgba(255,255,255,0.04);
+}
+
+.home2-mini-ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  color: var(--accent);
+}
+
+.home2-mini-k {
+  font-weight: 750;
+  margin-bottom: 6px;
+  color: rgba(255,255,255,0.92);
+}
+
+.home2-mini-v {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Workflow cards (3) */
+.home2-workflow {
+  display: grid;
+  gap: 14px;
+}
+
+.home2-work {
+  padding: 16px;
+  background: rgba(255,255,255,0.04);
+}
+
+.home2-work-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.home2-work-title {
+  font-weight: 800;
+  color: rgba(255,255,255,0.92);
+}
+
+.home2-badge {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(79,140,255,0.28);
+  background: rgba(79,140,255,0.10);
+  color: rgba(255,255,255,0.86);
+}
+
+.home2-work-body {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .home2-hero-grid,
+  .home2-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home2-mini-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home2-visual {
+    min-height: 260px;
+  }
+}
