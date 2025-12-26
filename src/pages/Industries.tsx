@@ -52,7 +52,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   "financial-services": {
-    title: "Financial Services",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -82,7 +82,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   manufacturing: {
-    title: "Manufacturing",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -112,7 +112,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   healthcare: {
-    title: "Healthcare",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -142,7 +142,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   "media-entertainment": {
-    title: "Media & Entertainment",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -171,7 +171,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   retail: {
-    title: "Retail",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -200,7 +200,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   telecom: {
-    title: "Telecom",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -228,7 +228,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   "communications-media": {
-    title: "Communications & Media",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -255,7 +255,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   "energy-utilities": {
-    title: "Energy & Utilities",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -281,7 +281,7 @@ const modalContent: Record<string, IndustryModalContent> = {
   },
 
   "higher-education": {
-    title: "Higher Education",
+    title: " ",
     sections: [
       {
         heading: "To investors",
@@ -314,14 +314,14 @@ const cards: IndustryCard[] = [
     description:
       "Deterministic recognition of symbols, markings, and schematics for safety-critical and classified systems.",
     href: "#aerospace-defense",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M12 2l8 7-8 13L4 9l8-7zm0 4.2L7.1 9.4 12 17l4.9-7.6L12 6.2z"
-        />
-      </svg>
-    ),
+icon: (
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3-1 3 1v-1.5L12 19v-5.5L21 16z"
+    />
+  </svg>
+),
   },
   {
     id: "financial-services",
@@ -329,14 +329,14 @@ const cards: IndustryCard[] = [
     description:
       "Exact, auditable recognition of forms, signatures, and stamps to meet regulatory and compliance requirements.",
     href: "#financial-services",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M4 4h16v4H4V4zm0 6h10v10H4V10zm12 0h4v10h-4V10z"
-        />
-      </svg>
-    ),
+icon: (
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M11 3h2v2.1c2.28.34 4 1.7 4 3.9h-2c0-1.1-1.34-2-3-2s-3 .9-3 2c0 .88.66 1.5 3.3 2.15C15.4 11.95 17 13.1 17 15.5c0 2.2-1.72 3.66-4 4V21h-2v-1.1c-2.4-.34-4-1.86-4-4.4h2c0 1.56 1.36 2.5 3 2.5s3-.94 3-2.5c0-1.18-.88-1.88-3.5-2.5C8.2 11.12 7 9.9 7 8c0-2.2 1.72-3.56 4-3.9V3z"
+    />
+  </svg>
+),
   },
   {
     id: "manufacturing",
@@ -344,14 +344,15 @@ const cards: IndustryCard[] = [
     description:
       "Structure-based identification of part markings and serials for reliable inspection under noise, wear, and variation.",
     href: "#manufacturing",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M3 7h6l2-3h2l2 3h4v14H3V7zm4 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"
-        />
-      </svg>
-    ),
+icon: (
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M3 21V10a1 1 0 0 1 1-1h3V6a1 1 0 0 1 1-1h2l1 2h3l1-2h2a1 1 0 0 1 1 1v15H3zm4-10H5v8h14v-8h-2v2l-4-2-4 2v-2H7zm2 6h2v2H9v-2zm4 0h2v2h-2v-2z"
+    />
+  </svg>
+)
+,
   },
   {
     id: "healthcare",
@@ -386,14 +387,15 @@ const cards: IndustryCard[] = [
     description:
       "Reliable identification across stores, devices, and channels with identical outputs across environments.",
     href: "#retail",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M7 7h14l-2 13H9L7 7zm-3 0h2l1-3h12l-1 3H6z"
-        />
-      </svg>
-    ),
+icon: (
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M3 12l9-9h6a2 2 0 0 1 2 2v6l-9 9L3 12zm15-5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM7 13l4 4 1.5-1.5-4-4L7 13z"
+    />
+  </svg>
+)
+,
   },
   {
     id: "telecom",
@@ -401,14 +403,15 @@ const cards: IndustryCard[] = [
     description:
       "Exact interpretation of network diagrams and visual identifiers used in infrastructure planning and operations.",
     href: "#telecom",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M12 2a7 7 0 0 1 7 7c0 2.4-1.3 4.6-3.3 5.8L12 22l-3.7-7.2C6.3 13.6 5 11.4 5 9a7 7 0 0 1 7-7zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
-        />
-      </svg>
-    ),
+icon: (
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      fill="currentColor"
+      d="M12 3a9 9 0 0 1 6.36 15.36l-1.42-1.42A7 7 0 0 0 12 5a7 7 0 0 0-4.94 11.94l-1.42 1.42A9 9 0 0 1 12 3zm0 4a5 5 0 0 1 3.54 8.54l-1.42-1.42A3 3 0 0 0 12 9a3 3 0 0 0-2.12 5.12l-1.42 1.42A5 5 0 0 1 12 7zm0 6a2 2 0 0 1 2 2c0 .53-.21 1.04-.59 1.41L12 22l-1.41-5.59A2 2 0 0 1 12 13z"
+    />
+  </svg>
+)
+,
   },
   {
     id: "communications-media",
