@@ -17,8 +17,7 @@ export default function SecondHome() {
 
 
             <p className="home2-sub">
-              Use SymbolicEngine (SEN) to recognize symbols by structure and invariants—so outputs are repeatable,
-              inspectable, and audit-ready.
+              SymbolicEngine (SEN) is a geometry-aware perceptual system that recognizes symbols by structure, topology, and invariants — not probabilities.
             </p>
 
             <div className="home2-cta">
@@ -32,7 +31,6 @@ export default function SecondHome() {
           </div>
 
           <aside className="home2-visual card" aria-label="Product preview">
-            <aside className="home2-visual card" aria-label="Product preview">
             <div className="home2-visual-inner">
                 <img
                 src="/src/home_image.png"
@@ -40,10 +38,17 @@ export default function SecondHome() {
                 className="home2-visual-image"
                 />
             </div>
-            </aside>
           </aside>
         </div>
-
+            <p className="home2-p">
+                <br />
+                <br />
+                • Perceptual AI Infrastructure <br />
+                • Deterministic;Traceable decisions<br />
+                • Geometry-first;Holes, symmetry, ratios<br />
+                • Built to scale;Perceptual layer for AI <br />
+                • Explainable
+            </p>
         {/* LOGOS */}
         <div className="home2-logo-row" aria-label="Trusted by">
           <div className="home2-logo-label">TRUSTED BY TEAMS BUILDING RELIABLE SYSTEMS</div>
@@ -58,6 +63,104 @@ export default function SecondHome() {
       </div>
 
       {/* SECTION 2 */}
+      <div className="home2-section">
+        <div className="home2-section-grid">
+          <div>
+            <h2 className="home2-h2">
+              Why Sen
+            </h2>
+            <p className="home2-p">
+              SEN is built to behave like a perceptual system: structural, stable, inspectable, and fast. It’s not “AI that guesses” — it’s AI that understands shape.
+            </p>
+          </div>
+
+          <div className="home2-mini-cards">
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">☁</div>
+              <div className="home2-mini-k">Deterministic</div>
+              <div className="home2-mini-v">Every output has a concrete reason. Debuggable, auditable, controllable.</div>
+            </div>
+            
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">☁</div>
+              <div className="home2-mini-k">Deterministic</div>
+              <div className="home2-mini-v">Traceable decisions.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">🔒</div>
+              <div className="home2-mini-k">Robust to Noise</div>
+              <div className="home2-mini-v">Structure survives blur, compression, and style variance better than raw pixels.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">🧩</div>
+              <div className="home2-mini-k">Composable</div>
+              <div className="home2-mini-v">Designed to plug into larger systems as a perception layer or validation engine.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">⚙</div>
+              <div className="home2-mini-k">Geometry First</div>
+              <div className="home2-mini-v">Holes, symmetry, ratios.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">⚙</div>
+              <div className="home2-mini-k">Built to Scale</div>
+              <div className="home2-mini-v">Perceptual Layer for AI.</div>
+            </div>
+        </div>
+            <p className="home2-p">
+              Next: Live demo with inspection tools + overlays.
+            </p>
+        </div>
+      </div>
+
+      {/* SECTION 3 */}
+      <div className="home2-section">
+        <div className="home2-section-grid">
+          <div>
+            <h2 className="home2-h2">
+              Recognition Pipeline
+            </h2>
+            <p className="home2-p">
+              A readable, inspectable path from pixels → meaning.
+            </p>
+          </div>
+
+          <div className="home2-mini-cards">
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">☁</div>
+              <div className="home2-mini-k">Splotches</div>
+              <div className="home2-mini-v">Segment pixels into contrast-consistent regions.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">🔒</div>
+              <div className="home2-mini-k">Fingerprint</div>
+              <div className="home2-mini-v">Compute geometric + topological invariants.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">🧩</div>
+              <div className="home2-mini-k">Match</div>
+              <div className="home2-mini-v">Deterministically score against template library.</div>
+            </div>
+
+            <div className="home2-mini card">
+              <div className="home2-mini-ico">⚙</div>
+              <div className="home2-mini-k">Explain</div>
+              <div className="home2-mini-v">Show why a result was chosen — no magic.</div>
+            </div>
+          </div>
+            <p className="home2-p">
+              Next: Live demo with inspection tools + overlays.
+            </p>
+        </div>
+      </div>
+
+      {/* SECTION 4 */}
       <div className="home2-section">
         <div className="home2-section-grid">
           <div>
@@ -98,7 +201,7 @@ export default function SecondHome() {
         </div>
       </div>
 
-      {/* SECTION 3 */}
+      {/* SECTION 5 */}
       <div className="home2-section">
         <div className="home2-section-grid">
           <div>
@@ -111,31 +214,31 @@ export default function SecondHome() {
             </p>
           </div>
 
-<div className="home2-mini-cards">
-  <div className="home2-mini card">
-    <div className="home2-mini-ico" aria-hidden="true">🔍</div>
-    <div className="home2-mini-k">Validation overlays</div>
-    <div className="home2-mini-v">
-      Visualize structural evidence (symmetry, holes, ratios) behind every match.
-    </div>
-  </div>
+            <div className="home2-mini-cards">
+            <div className="home2-mini card">
+                <div className="home2-mini-ico" aria-hidden="true">🔍</div>
+                <div className="home2-mini-k">Validation overlays</div>
+                <div className="home2-mini-v">
+                Visualize structural evidence (symmetry, holes, ratios) behind every match.
+                </div>
+            </div>
 
-  <div className="home2-mini card">
-    <div className="home2-mini-ico" aria-hidden="true">🗂</div>
-    <div className="home2-mini-k">Template library</div>
-    <div className="home2-mini-v">
-      Version templates like code and roll changes safely across environments.
-    </div>
-  </div>
+            <div className="home2-mini card">
+                <div className="home2-mini-ico" aria-hidden="true">🗂</div>
+                <div className="home2-mini-k">Template library</div>
+                <div className="home2-mini-v">
+                Version templates like code and roll changes safely across environments.
+                </div>
+            </div>
 
-  <div className="home2-mini card">
-    <div className="home2-mini-ico" aria-hidden="true">📐</div>
-    <div className="home2-mini-k">Deterministic scoring</div>
-    <div className="home2-mini-v">
-      Eliminate probabilistic drift and keep results stable under noise and style shifts.
-    </div>
-  </div>
-</div>
+            <div className="home2-mini card">
+                <div className="home2-mini-ico" aria-hidden="true">📐</div>
+                <div className="home2-mini-k">Deterministic scoring</div>
+                <div className="home2-mini-v">
+                Eliminate probabilistic drift and keep results stable under noise and style shifts.
+                </div>
+            </div>
+            </div>
 
         </div>
       </div>
