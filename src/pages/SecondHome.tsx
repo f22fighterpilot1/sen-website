@@ -32,13 +32,15 @@ export default function SecondHome() {
           </div>
 
           <aside className="home2-visual card" aria-label="Product preview">
+            <aside className="home2-visual card" aria-label="Product preview">
             <div className="home2-visual-inner">
-              {/* Replace with an <img> when you have one */}
-              <div className="home2-visual-chip">SEN Console</div>
-              <div className="home2-visual-panel" />
-              <div className="home2-visual-panel small" />
-              <div className="home2-visual-panel tiny" />
+                <img
+                src="/src/home_image.png"
+                alt=""
+                className="home2-visual-image"
+                />
             </div>
+            </aside>
           </aside>
         </div>
 
