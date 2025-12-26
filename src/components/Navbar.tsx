@@ -27,23 +27,31 @@ export default function Navbar() {
 
     return (
         <header className="nav">
-            <div className="container nav-inner">
-                <NavLink to="/" className="brand" onClick={close}>
-                    <span className="brand-mark" aria-hidden />
-                    <span>SymbolicEngine</span>
-                </NavLink>
+            <div className="container nav-left">
+<div className="nav-left">
+  <NavLink to="/" className="brand" onClick={close}>
+    <span className="brand-mark" aria-hidden />
+    <span>SymbolicEngine</span>
+  </NavLink>
 
-                {/* Desktop navigation */}
-                <nav className="nav-links desktop" aria-label="Primary navigation">
-                    {links.map((l) => (
-                        <NavLink key={l.to} to={l.to} className="nav-link">
-                            {l.label}
-                        </NavLink>
-                    ))}
-                    <NavLink to="/demo" className="btn btn-primary">
-                        Launch Demo
-                    </NavLink>
-                </nav>
+  <nav className="nav-links desktop" aria-label="Primary navigation">
+    {links.map((l) => (
+      <NavLink
+        key={l.to}
+        to={l.to}
+        end={l.to === "/"}
+        className="nav-link"
+      >
+        {l.label}
+      </NavLink>
+    ))}
+  </nav>
+</div>
+
+<NavLink to="/demo" className="btn btn-primary desktop">
+  Launch Demo
+</NavLink>
+
 
                 {/* Mobile hamburger button */}
                 <button

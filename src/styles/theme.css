@@ -44,16 +44,15 @@
     padding-top: env(safe-area-inset-top);
 }
 
-.nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-
-    /* make it feel less skinny */
-    min-height: 64px;
-    padding: 10px 0; /* instead of 14px 0 */
+/* Ensure logo + nav links sit on one horizontal line */
+.nav-left {
+  display: flex;
+  flex-direction: row;   /* ← force horizontal */
+  align-items: center;
+  gap: 18px;
+  white-space: nowrap;   /* ← prevents wrapping */
 }
+
 
 
 .brand {
