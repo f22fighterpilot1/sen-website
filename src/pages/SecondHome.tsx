@@ -26,7 +26,7 @@ export default function SecondHome() {
                 Launch demo
               </NavLink>
               <NavLink to="/how-it-works" className="btn">
-                Request a demo →
+                How it works →
               </NavLink>
             </div>
           </div>
