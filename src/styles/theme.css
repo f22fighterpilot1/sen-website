@@ -63,9 +63,6 @@
   margin-left: auto;   /* ← this is what actually does it */
 }
 
-
-
-
 .brand {
     display: inline-flex;
     align-items: center;
