@@ -45,13 +45,24 @@
 }
 
 /* Ensure logo + nav links sit on one horizontal line */
+.nav-inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Left cluster */
 .nav-left {
   display: flex;
-  flex-direction: row;   /* ← force horizontal */
   align-items: center;
   gap: 18px;
-  white-space: nowrap;   /* ← prevents wrapping */
+  white-space: nowrap;
 }
+
+/* CTA: push ALL the way right */
+.nav-cta {
+  margin-left: auto;   /* ← this is what actually does it */
+}
+
 
 
 
