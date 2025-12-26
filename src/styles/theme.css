@@ -964,14 +964,16 @@
 
 /* Sections */
 .home2-section {
-  margin-top: 72px;
+  margin-top: 172px;
 }
 
 .home2-section-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 44px;
+  row-gap: 24px;   /* try 10–16px */
+  column-gap: 44px; /* keep your horizontal rhythm if you ever go 2-col again */
   align-items: start;
+  grid-template-columns: 1fr;
 }
 
 .home2-h2 {
@@ -987,12 +989,13 @@
 .home2-mini-cards {
   display: flex;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  gap: 88px;
 }
 
 .home2-mini {
-  padding: 16px;
-  background: rgba(255,255,255,0.04);
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 .home2-mini-ico {
@@ -1058,6 +1061,61 @@
   line-height: 1.6;
 }
 
+/* Home v2 — feature row (no boxes) */
+.home2-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 6px; /* keeps it tucked under the heading/paragraph */
+}
+
+.home2-feature {
+  text-align: left;
+}
+
+.home2-feature-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+
+  /* small icon tile, not a “card” */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: var(--accent);
+
+  margin-bottom: 12px;
+  font-size: 18px; /* if emoji; SVG will ignore */
+}
+
+.home2-feature-ico svg {
+  display: block;
+}
+
+.home2-feature-title {
+  font-weight: 750;
+  margin: 0 0 8px 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.home2-feature-desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 42ch;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .home2-features {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+
 /* Responsive */
 @media (max-width: 920px) {
   .home2-hero-grid,
@@ -1075,6 +1133,8 @@
 }
 
 /*==inudstries==*/
+/* theme.css */
+
 /* Modal overlay */
 .modal-overlay {
   position: fixed;

@@ -109,37 +109,32 @@ export default function SecondHome() {
             </p>
           </div>
 
-          <div className="home2-workflow">
-            <div className="home2-work card">
-              <div className="home2-work-head">
-                <div className="home2-work-title">Validation overlays</div>
-                <span className="home2-badge">Inspection</span>
-              </div>
-              <p className="home2-work-body">
-                Visualize structural evidence (symmetry, holes, ratios) behind every match.
-              </p>
-            </div>
+<div className="home2-mini-cards">
+  <div className="home2-mini card">
+    <div className="home2-mini-ico" aria-hidden="true">🔍</div>
+    <div className="home2-mini-k">Validation overlays</div>
+    <div className="home2-mini-v">
+      Visualize structural evidence (symmetry, holes, ratios) behind every match.
+    </div>
+  </div>
 
-            <div className="home2-work card">
-              <div className="home2-work-head">
-                <div className="home2-work-title">Template library</div>
-                <span className="home2-badge">Control</span>
-              </div>
-              <p className="home2-work-body">
-                Version templates like code and roll changes safely across environments.
-              </p>
-            </div>
+  <div className="home2-mini card">
+    <div className="home2-mini-ico" aria-hidden="true">🗂</div>
+    <div className="home2-mini-k">Template library</div>
+    <div className="home2-mini-v">
+      Version templates like code and roll changes safely across environments.
+    </div>
+  </div>
 
-            <div className="home2-work card">
-              <div className="home2-work-head">
-                <div className="home2-work-title">Deterministic scoring</div>
-                <span className="home2-badge">Reliability</span>
-              </div>
-              <p className="home2-work-body">
-                Eliminate probabilistic drift and keep results stable under noise and style shifts.
-              </p>
-            </div>
-          </div>
+  <div className="home2-mini card">
+    <div className="home2-mini-ico" aria-hidden="true">📐</div>
+    <div className="home2-mini-k">Deterministic scoring</div>
+    <div className="home2-mini-v">
+      Eliminate probabilistic drift and keep results stable under noise and style shifts.
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
