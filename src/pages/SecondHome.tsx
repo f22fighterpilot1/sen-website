@@ -43,6 +43,7 @@ export default function SecondHome() {
             <p className="home2-p">
                 <br />
                 <br />
+                 CHANGE THIS LAYOUT <br />
                 • Perceptual AI Infrastructure <br />
                 • Deterministic;Traceable decisions<br />
                 • Geometry-first;Holes, symmetry, ratios<br />
@@ -124,6 +125,8 @@ export default function SecondHome() {
             <h2 className="home2-h2">
               Recognition Pipeline
             </h2>
+                             CHANGE THIS LAYOUT <br />
+
             <p className="home2-p">
               A readable, inspectable path from pixels → meaning.
             </p>
