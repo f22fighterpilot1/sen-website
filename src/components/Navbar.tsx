@@ -50,9 +50,29 @@ export default function Navbar() {
         </div>
 
         {/* RIGHT: CTA (desktop only) */}
-        <NavLink to="/demo" className="btn btn-primary desktop nav-cta">
-          Launch Demo
-        </NavLink>
+<div className="nav-right desktop nav-cta">
+<NavLink to="/login" className="nav-link nav-login">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      fill="currentColor"
+      d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z"
+    />
+  </svg>
+  <span>Log in</span>
+</NavLink>
+
+
+  <NavLink to="/demo" className="btn btn-primary">
+    Launch Demo
+  </NavLink>
+</div>
+
 
         {/* Mobile hamburger button (mobile only) */}
         <button

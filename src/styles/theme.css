@@ -58,6 +58,21 @@
   white-space: nowrap;
 }
 
+.nav-right {
+  margin-left: auto;          /* pushes group to far right */
+  display: flex;
+  align-items: center;
+  gap: 14px;                  /* space between Log in and Launch Demo */
+}
+
+/* Log in icon + label */
+.nav-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
 /* CTA: push ALL the way right */
 .nav-cta {
   margin-left: auto;   /* ← this is what actually does it */
