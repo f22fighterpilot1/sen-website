@@ -1073,3 +1073,101 @@
     min-height: 260px;
   }
 }
+
+/*==inudstries==*/
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+}
+
+/* Dark modal panel */
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: auto;
+
+  border-radius: 10px;
+  outline: none;
+}
+
+.modal-panel--dark {
+  background: #0f1216;
+  color: #e6e8eb;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+}
+
+/* Header */
+.modal-title {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Body spacing */
+.modal-body {
+  padding: 2.25rem 2.75rem;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-heading {
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: rgba(230, 232, 235, 0.65);
+}
+
+.modal-paragraph {
+  margin: 0 0 0.85rem 0;
+  line-height: 1.65;
+  color: rgba(230, 232, 235, 0.9);
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.25rem;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: rgba(230, 232, 235, 0.75);
+  font-size: 1.75rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+}
+
+.modal-close:hover {
+  color: rgba(230, 232, 235, 1);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+}
