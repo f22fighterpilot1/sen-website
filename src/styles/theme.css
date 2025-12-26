@@ -880,22 +880,17 @@
   flex-wrap: wrap;
 }
 
-.home2-visual {
-  padding: 18px;
-  min-height: 330px;
-  background:
-    radial-gradient(680px 420px at 70% 25%, rgba(124,92,255,0.25), transparent 55%),
-    radial-gradient(520px 360px at 25% 70%, rgba(79,140,255,0.22), transparent 55%),
-    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+/* Home v2 hero image — no card background */
+.home2-visual.card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 .home2-visual-inner {
-  position: relative;
-  height: 100%;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(0,0,0,0.22);
-  overflow: hidden;
+  background: none;
+  border: none;
 }
 
 .home2-visual-chip {
@@ -937,7 +932,7 @@
 }
 
 .home2-logo-row {
-  margin-top: 22px;
+  margin-top: 188px;
   padding-top: 22px;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
