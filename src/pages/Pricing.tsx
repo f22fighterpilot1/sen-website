@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 // src/pages/Pricing.jsx
 export default function Pricing() {
   return (
@@ -10,13 +12,12 @@ export default function Pricing() {
             <p className="lead">
               Transparent plans and pricing provides complete access to SymbolicEngine, enabling you to build, verify, and deploy with certainty at any scale. Begin with a $500 credit, ready to use across the entire platform.
             </p>
-            <div className="hero-actions">
-              <a className="btn btn-primary" href="#">
-                Sign up →
-              </a>
-            </div>
+          <div className="hero-actions">
+            <NavLink to="/signup" className="btn btn-primary">
+              Sign up →
+            </NavLink>
           </div>
-
+          </div>
           {/* Decorative background panel */}
           <div className="pricing-visual card" />
         </div>

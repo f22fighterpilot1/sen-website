@@ -60,7 +60,7 @@ export default function Login() {
                 <span>Remember me</span>
               </label>
 
-              <NavLink to="/support" className="auth-link">
+              <NavLink to="/forgot-password" className="auth-link">
                 Forgot password?
               </NavLink>
             </div>
@@ -71,7 +71,7 @@ export default function Login() {
 
             <p className="auth-foot">
               Don’t have access?{" "}
-              <NavLink to="/support" className="auth-link">
+              <NavLink to="/create-account" className="auth-link">
                 Request an account
               </NavLink>
               .

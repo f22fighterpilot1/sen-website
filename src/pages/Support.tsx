@@ -199,6 +199,7 @@ export default function Support() {
           By submitting this form, you acknowledge and agree that SymbolicEngine will process your
           information for support and product communications.
         </p>
+        <p>Email: <strong>contact@symbolicengine.ai</strong></p>
 
         <button className="btn btn-primary support-submit" type="submit">
           Submit
@@ -208,4 +209,3 @@ export default function Support() {
   );
 }
 
-Email: <strong>contact@symbolicengine.ai</strong>

@@ -7,6 +7,10 @@ import Industries from "./pages/Industries";
 import Pricing from "./pages/Pricing";
 import Support from "./pages/Support";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import CreateAccount from "./pages/CreateAccount";
+import ForgotPassword from "./pages/ForgotPassword";
+
 
 
 export default function App() {
@@ -20,6 +24,10 @@ export default function App() {
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/create-account" element={<CreateAccount />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+
 
             </Route>
         </Routes>
