@@ -72,7 +72,6 @@
   gap: 6px;
 }
 
-
 /* CTA: push ALL the way right */
 .nav-cta {
   margin-left: auto;   /* ← this is what actually does it */
@@ -746,11 +745,12 @@
 }
 
 .tutorial-video {
-  border: 1px solid var(--border);
-  border-radius: calc(var(--radius) - 4px);
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 0;
+  background: none;
+  overflow: hidden; /* keep this so iframe doesn’t spill */
 }
+
 
 /* Responsive video ratio box */
 .tutorial-video iframe {
@@ -1247,4 +1247,125 @@
   .modal-title {
     font-size: 1.25rem;
   }
+}
+
+/* ================= AUTH ================= */
+
+.auth-page {
+  padding: 44px 0 24px;
+}
+
+.auth-header h1 {
+  margin: 0 0 10px 0;
+}
+
+.auth-sub {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.auth-shell {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.auth-card {
+  padding: 22px;
+}
+
+.auth-form {
+  display: grid;
+  gap: 10px;
+}
+
+.auth-label {
+  margin-top: 8px;
+  font-weight: 650;
+  color: rgba(255,255,255,0.9);
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: rgba(79, 140, 255, 0.45);
+  box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.12);
+}
+
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.auth-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.auth-link {
+  color: rgba(255,255,255,0.86);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 13px;
+}
+
+.auth-submit {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.auth-foot {
+  margin: 12px 0 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.auth-side-card {
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.auth-side-k {
+  font-weight: 750;
+  margin: 0 0 6px 0;
+  color: rgba(255,255,255,0.92);
+}
+
+.auth-side-v {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media (max-width: 920px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Remove card background behind tutorial video */
+.tutorial-media.card,
+.tutorial-media .card,
+.tutorial-video.card {
+  background: none;
+  border: none;
+  box-shadow: none;
 }

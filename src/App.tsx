@@ -6,6 +6,8 @@ import HowItWorks from "./pages/HowItWorks";
 import Industries from "./pages/Industries";
 import Pricing from "./pages/Pricing";
 import Support from "./pages/Support";
+import Login from "./pages/Login";
+
 
 export default function App() {
     return (
@@ -17,6 +19,8 @@ export default function App() {
                 <Route path="/support" element={<Support />} />
                 <Route path="/industries" element={<Industries />} />
                 <Route path="/pricing" element={<Pricing />} />
+                <Route path="/login" element={<Login />} />
+
             </Route>
         </Routes>
     );
