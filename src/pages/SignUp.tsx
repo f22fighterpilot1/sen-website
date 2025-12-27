@@ -33,12 +33,12 @@ export default function Signup() {
 
           <div className="signup-actions">
 <NavLink to="/create-account" className="btn btn-primary">
-  Create an account →
+  Create an account
 </NavLink>
 
 
             <NavLink to="/login" className="btn signup-btn-secondary">
-              Sign in
+              Log in
             </NavLink>
           </div>
 

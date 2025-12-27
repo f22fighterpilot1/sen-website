@@ -14,7 +14,7 @@ export default function Pricing() {
             </p>
           <div className="hero-actions">
             <NavLink to="/signup" className="btn btn-primary">
-              Sign up →
+              Sign up
             </NavLink>
           </div>
           </div>

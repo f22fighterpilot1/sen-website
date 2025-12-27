@@ -39,7 +39,7 @@ export default function CreateAccount() {
         </button>
 
         <div className="ca-footer">
-          Already have an account? <NavLink to="/login">Sign in →</NavLink>
+          Already have an account? <NavLink to="/login">Log in</NavLink>
         </div>
       </div>
     </section>
