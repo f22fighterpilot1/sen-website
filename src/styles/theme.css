@@ -50,6 +50,11 @@
   align-items: center;
   min-height: 72px;     /* ↑ from 64px */
   padding: 16px 0;      /* ↑ from 10px */
+  width: 90%;
+  max-width: none;         /* ← critical */
+  padding: 15px 32px;      /* ← real breathing room */
+
+    margin: 0 auto;
 }
 
 /* Left cluster */
@@ -85,9 +90,11 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 850;
     letter-spacing: -0.02em;
+    margin-right: 20px; /* ← increases space before first nav link */
+
 }
 
 .brand-mark {
@@ -1019,6 +1026,10 @@
   margin-bottom: 14px;
 }
 
+.home2 h1 {
+  font-size: clamp(3.2rem, 6vw, 4.8rem);
+}
+
 .home2-p {
   max-width: 65ch;
   color: var(--muted);
@@ -1289,6 +1300,7 @@
 
 .auth-shell {
   margin-top: 26px;
+  margin-bottom: 126px;
   display: grid;
   grid-template-columns: 1fr 0.9fr;
   gap: 22px;
