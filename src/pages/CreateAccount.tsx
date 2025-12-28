@@ -8,7 +8,7 @@ export default function CreateAccount() {
           <span className="ca-mark" />
         </div>
 
-        <h1 className="ca-title">Create SymbolicEngine Account</h1>
+        <h2 className="ca-title">Create SymbolicEngine Account</h2>
         <p className="ca-sub">Enter your email to continue.</p>
 
         <form className="ca-form">
