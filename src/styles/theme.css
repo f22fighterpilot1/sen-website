@@ -402,7 +402,7 @@
 
 .footer-extra {
   border-top: 1px solid var(--border);
-  padding: 28px 0 40px;
+  padding: 28px 0 0px;
 }
 
 .footer-extra-inner {
