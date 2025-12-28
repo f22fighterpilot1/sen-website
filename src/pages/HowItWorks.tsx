@@ -1,7 +1,7 @@
 export default function HowItWorks() {
     return (
     <section className="section">
-    <h2>What is SymbolicEngine?</h2>
+    <h1>What is SymbolicEngine?</h1>
       <div className="container tutorial">
         {/* Reference line */}
         <p className="tutorial-ref">

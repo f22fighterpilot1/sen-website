@@ -49,7 +49,7 @@ export default function ForgotPassword() {
 
         <div className="fp-back">
           <NavLink to="/login" className="fp-back-link">
-            Back to sign in
+            Back to log in
           </NavLink>
         </div>
       </div>
