@@ -6,7 +6,7 @@ export default function Pricing() {
     <main className="content">
       {/* HERO */}
       <section className="pricing-hero">
-        <div className="container pricing-hero-grid">
+        <div className="pricing-hero-grid">
           <div>
             <h1>Pricing built for scale</h1>
             <p className="lead">
@@ -25,7 +25,6 @@ export default function Pricing() {
 
       {/* PLANS */}
       <section className="section">
-        <div className="container">
           <div className="cards pricing-cards">
             <div className="card pricing-card">
               <h3>Pay-as-You-Go (PAYG)</h3>
@@ -60,7 +59,6 @@ export default function Pricing() {
               </a>
             </div>
           </div>
-        </div>
       </section>
 
 <section className="section">
@@ -108,7 +106,6 @@ export default function Pricing() {
 </section>
 
 <section className="section faq">
-  <div className="container">
     <h2>FAQs</h2>
 
     {/* Tabs */}
@@ -173,7 +170,6 @@ export default function Pricing() {
         </p>
       </details>
     </div>
-  </div>
 </section>
 
 
