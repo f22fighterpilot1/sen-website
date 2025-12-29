@@ -395,7 +395,7 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 60px 0;
+    padding: 20px 0 20px;          /* reduced bottom */
     font-size: 13px;
     color: var(--faint);
 }
