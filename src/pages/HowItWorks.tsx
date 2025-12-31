@@ -51,17 +51,17 @@ export default function HowItWorks() {
               <div className="workflow-grid">
                 <figure className="workflow-item">
                   <img src="/src/media/images/eyeball.png" alt="Visual matching" className="workflow-img" />
-                  <figcaption>1. Visual Matching</figcaption>
+                  <figcaption>1. Visual Input</figcaption>
                 </figure>
                 
                 <figure className="workflow-item">
-                  <img src="/src/media/images/structural_normalization.png" alt="Structural normalization" className="workflow-img" />
-                  <figcaption>2. Structural Normalization</figcaption>
+                  <img src="/src/media/images/symbol_decomposition.png" alt="Symbol decomposition" className="workflow-img" />
+                  <figcaption>2. Symbol Decomposition</figcaption>
                 </figure>
 
                 <figure className="workflow-item">
-                  <img src="/src/media/images/symbol_decomposition.png" alt="Symbol decomposition" className="workflow-img" />
-                  <figcaption>3. Symbol Decomposition</figcaption>
+                  <img src="/src/media/images/structural_normalization.png" alt="Structural normalization" className="workflow-img" />
+                  <figcaption>3. Structural Normalization</figcaption>
                 </figure>
 
                 <figure className="workflow-item">
