@@ -17,7 +17,7 @@ export default function HowItWorks() {
           <div className="tutorial-video">
             {/* Replace src with your real embed URL (YouTube/Vimeo/etc.) */}
             <iframe
-              src="/src/Drew_Cyber_Careers.mp4"
+              src="/src/media/videos/Drew_Cyber_Careers.mp4"
               title="Tutorial video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
