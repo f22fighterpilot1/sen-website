@@ -2039,3 +2039,45 @@
     padding: 22px 18px 20px;
   }
 }
+
+/* ================= WORKFLOW DIAGRAM (IMAGE-ONLY) ================= */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 32px 40px;
+  justify-content: center; /* ← centers grid block */
+  align-items: center;
+  margin-top: 36px;    
+  margin-bottom: 200px;
+
+}
+
+.workflow-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* optional polish */
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .workflow-grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 520px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.workflow-item {
+  text-align: center;
+}
+
+.workflow-item figcaption {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
