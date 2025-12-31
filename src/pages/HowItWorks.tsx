@@ -27,12 +27,6 @@ export default function HowItWorks() {
 
         {/* Content */}
         <div className="tutorial-body">
-          <p>
-            Infrastructure as Code (IaC) tools let you define and manage
-            infrastructure through configuration files rather than a graphical
-            interface. This approach helps keep your infrastructure consistent,
-            auditable, and repeatable across environments.
-          </p>
 
           <p>
             SymbolicEngine supports deterministic workflows for validating
