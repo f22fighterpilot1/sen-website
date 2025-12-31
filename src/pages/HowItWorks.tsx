@@ -46,7 +46,7 @@ export default function HowItWorks() {
             <li>Safer collaboration through predictable outputs</li>
           </ul>
 
-          <h2>Manage any infrastructure</h2>
+          <h2>Under the Hood</h2>
 
           <p>
             Interact with your platforms and services through a consistent model.

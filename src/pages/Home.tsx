@@ -33,7 +33,7 @@ export default function Home() {
           <aside className="home2-visual card" aria-label="Product preview">
             <div className="home2-visual-inner">
                 <img
-                src="/src/media/images/home_image.png"
+                src="/src/media/images/verified_symbol_output_transp.png"
                 alt=""
                 className="home2-visual-image"
                 />
