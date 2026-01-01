@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import WideSlideshow from "../components/WideSlideshow";
 
 const LOGOS = ["Acme", "Waypoint", "SeatGeek", "Lufthansa", "Indeed", "GSK", "Databricks"];
 
@@ -116,8 +117,8 @@ export default function Home() {
               Next: Live demo with inspection tools + overlays.
             </p>
         </div>
+      <WideSlideshow />
       </div>
-
       {/* SECTION 3 */}
       <div className="home2-section">
         <div className="home2-section-grid">

@@ -88,7 +88,7 @@ export default function HowItWorks() {
           </p>
 
           <h2>Standardize your deployment workflow</h2>
-
+          
           <p>
             Compose configurations into reusable modules and keep your workflow
             consistent from development through production. Deterministic checks
