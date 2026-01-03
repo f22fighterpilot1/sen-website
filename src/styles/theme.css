@@ -962,9 +962,15 @@
 .home2 {
   padding: 44px 0 24px;
 }
+.home2 { margin-top: -72px; padding-top: 0px; }
+
 
 .home2-hero {
   padding: 34px 0 32px;
+    margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: none;
+  width: auto;
 }
 
 .home2-hero-grid {
@@ -993,6 +999,10 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+    max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 150px;
+  box-sizing: border-box;
 }
 
 /* Home v2 hero image — no card background */
@@ -1092,6 +1102,10 @@
 
 .home2 h1 {
   font-size: clamp(3.2rem, 6vw, 4.8rem);
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 150px;
+  box-sizing: border-box;
 }
 
 .home2-p {
@@ -1245,6 +1259,57 @@
     min-height: 260px;
   }
 }
+
+/* ===== Full-bleed hero video background (flush to edges + navbar) ===== */
+
+.home2-hero {
+  position: relative;
+  overflow: hidden;
+  /* no left/right padding here — your content grid handles its own spacing */
+}
+
+/* Full-bleed breakout like your wide-slideshow */
+.home2-hero-bleed {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+
+  /* height matches the hero block */
+  height: 100%;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home2-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1.02); /* avoids edge seams */
+}
+
+.home2-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 520px at 25% 20%, rgba(79,140,255,0.18), transparent 60%),
+    radial-gradient(900px 520px at 75% 70%, rgba(124,92,255,0.14), transparent 65%),
+    linear-gradient(180deg, rgba(7,10,16,0.55), rgba(7,10,16,0.90));
+}
+
+/* Keep hero content above the video */
+.home2-hero-grid,
+.home2-logo-row {
+  position: relative;
+  z-index: 1;
+}
+
 
 /*==inudstries==*/
 /* theme.css */

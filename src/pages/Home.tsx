@@ -6,22 +6,39 @@ const LOGOS = ["Acme", "Waypoint", "SeatGeek", "Lufthansa", "Indeed", "GSK", "Da
 export default function Home() {
   return (
     <section className="home2">
+
       {/* HERO */}
-      <div className="home2-hero">
+<div className="home2-hero">
+  <div className="home2-hero-bleed" aria-hidden="true">
+    <video
+      className="home2-hero-video"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+    >
+      <source src="/src/media/videos/space_shuttle_trim.mp4" type="video/mp4" />
+    </video>
+    <div className="home2-hero-overlay" />
+  </div>
+  
         <div className="home2-hero-grid">
           <div>
-                   <h1>
-                    The world’s first<br />
-                    fully deterministic<br />
-                    AI Infrastructure
-                    </h1>
+            <h1>
+            The world’s first<br />
+            fully deterministic<br />
+            AI Infrastructure
+            </h1>
 
-
+            {/*<p className="home2-sub">
+              SymbolicEngine (SEN) is a geometry-aware perceptual system that recognizes symbols by structure, topology, and invariants — not probabilities.
+            </p>*/}
+            
+            <div className="home2-cta">
             <p className="home2-sub">
               SymbolicEngine (SEN) is a geometry-aware perceptual system that recognizes symbols by structure, topology, and invariants — not probabilities.
             </p>
-
-            <div className="home2-cta">
               <NavLink to="/demo" className="btn btn-primary">
                 Launch demo
               </NavLink>
