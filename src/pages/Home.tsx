@@ -68,7 +68,7 @@ export default function Home() {
                 • Built to scale;Perceptual layer for AI <br />
                 • Explainable
             </p>
-        {/* LOGOS */}
+        {/* LOGOS 
         <div className="home2-logo-row" aria-label="Trusted by">
           <div className="home2-logo-label">TRUSTED BY TEAMS BUILDING RELIABLE SYSTEMS</div>
           <div className="home2-logos">
@@ -78,7 +78,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-        </div>
+        </div>*/}
       </div>
 
       {/* SECTION 2 */}
