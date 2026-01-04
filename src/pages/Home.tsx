@@ -76,13 +76,10 @@ export default function Home() {
       <div className="home2-section">
                     <p className="home2-p">
                 <br />
+                Infrastructure, not a model.
+Deterministic perception that recognizes and verifies visual structure—designed to be embedded, inspected, and trusted.
                 <br />
-                 CHANGE THIS LAYOUT <br />
-                • Perceptual AI Infrastructure <br />
-                • Deterministic;Traceable decisions<br />
-                • Geometry-first;Holes, symmetry, ratios<br />
-                • Built to scale;Perceptual layer for AI <br />
-                • Explainable
+                <br />
             </p>
         <div className="home2-section-grid">
           <div>
