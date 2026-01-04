@@ -26,7 +26,7 @@ body {
   --accent2: #7c5cff;
 
   /* Layout */
-  --max: 1120px;
+  --max: 1360px;
   --radius: 16px;
 
   /* Typography */
@@ -88,6 +88,7 @@ h1 {
 h2 {
   font-size: clamp(1.5rem, 2.2vw, 2.1rem);
 }
+
 p {
   margin: 0 0 14px 0;
   color: var(--muted);
