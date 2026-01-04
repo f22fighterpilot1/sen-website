@@ -974,10 +974,15 @@
 }
 
 .home2-hero-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 44px;
   align-items: start;
+  /* margin-bottom: 50px; */
+  min-height: calc(100vh - 72px); /* subtract sticky nav height */
+  flex-direction: column;
+  margin-top: 100px;
+
 }
 
 .home2-title {
@@ -992,6 +997,7 @@
   font-size: 16px;
   line-height: 1.7;
   margin-bottom: 22px;
+  margin-top: 22px;
   color: var(--muted);
 }
 
@@ -1060,7 +1066,7 @@
   margin-top: 58px;
   padding-top: 22px;
   border-top: 1px solid rgba(255,255,255,0.08);
-      max-width: var(--max);
+  max-width: var(--max);
   margin: 0 auto;
   padding: 0 0px;
   box-sizing: border-box;
@@ -1108,7 +1114,7 @@
   font-size: clamp(3.2rem, 6vw, 4.8rem);
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0 150px;
+  padding: 0 195px;
   box-sizing: border-box;
 }
 
@@ -1249,20 +1255,48 @@
 
 
 /* Responsive */
+/* ================= HOME v2 — Mobile ================= */
 @media (max-width: 920px) {
+  /* hero + sections become single column */
   .home2-hero-grid,
   .home2-section-grid {
     grid-template-columns: 1fr;
+    gap: 22px;
   }
 
-  .home2-mini-cards {
+  /* give mobile comfortable side padding for ALL hero content */
+  .home2-hero-grid,
+  .home2-logo-row,
+  .home2-section-grid {
+    padding-left: 18px;
+    padding-right: 18px;
+    box-sizing: border-box;
+  }
+
+  /* if you still have this desktop hack, kill it on mobile */
+  .home2 h1 {
+    padding: 0; /* important if you have padding: 0 195px on desktop */
+  }
+
+  /* features already grid — stack cleanly */
+  .home2-features {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
+  /* mini cards: you used flex on desktop, so switch to column on mobile */
+  .home2-mini-cards {
+    display: grid;                 /* <- key fix */
+    grid-template-columns: 1fr;
+    gap: 18px;                     /* replace the massive 88px flex gap */
+  }
+
+  /* visual should not force a big empty block on small screens */
   .home2-visual {
-    min-height: 260px;
+    min-height: 200px;
   }
 }
+
 
 /* ===== Full-bleed hero video background (flush to edges + navbar) ===== */
 

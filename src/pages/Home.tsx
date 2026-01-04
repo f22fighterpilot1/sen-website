@@ -38,17 +38,18 @@ export default function Home() {
             <div className="home2-cta">
             <p className="home2-sub">
               SymbolicEngine (SEN) is a geometry-aware perceptual system that recognizes symbols by structure, topology, and invariants — not probabilities.
-            </p>
+              < br/> < br/>
               <NavLink to="/demo" className="btn btn-primary">
                 Launch demo
               </NavLink>
               <NavLink to="/how-it-works" className="btn">
                 How it works →
               </NavLink>
+            </p>
             </div>
           </div>
 
-          <aside className="home2-visual card" aria-label="Product preview">
+          {/* <aside className="home2-visual card" aria-label="Product preview">
             <div className="home2-visual-inner">
                 <img
                 src="/src/media/images/verified_symbol_output_transp.png"
@@ -56,18 +57,8 @@ export default function Home() {
                 className="home2-visual-image"
                 />
             </div>
-          </aside>
+          </aside> */}
         </div>
-            <p className="home2-p">
-                <br />
-                <br />
-                 CHANGE THIS LAYOUT <br />
-                • Perceptual AI Infrastructure <br />
-                • Deterministic;Traceable decisions<br />
-                • Geometry-first;Holes, symmetry, ratios<br />
-                • Built to scale;Perceptual layer for AI <br />
-                • Explainable
-            </p>
         {/* LOGOS 
         <div className="home2-logo-row" aria-label="Trusted by">
           <div className="home2-logo-label">TRUSTED BY TEAMS BUILDING RELIABLE SYSTEMS</div>
@@ -83,6 +74,16 @@ export default function Home() {
 
       {/* SECTION 2 */}
       <div className="home2-section">
+                    <p className="home2-p">
+                <br />
+                <br />
+                 CHANGE THIS LAYOUT <br />
+                • Perceptual AI Infrastructure <br />
+                • Deterministic;Traceable decisions<br />
+                • Geometry-first;Holes, symmetry, ratios<br />
+                • Built to scale;Perceptual layer for AI <br />
+                • Explainable
+            </p>
         <div className="home2-section-grid">
           <div>
             <h2 className="home2-h2">
