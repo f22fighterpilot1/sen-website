@@ -93,7 +93,7 @@ export default function Pricing() {
       ["Ephemeral workspaces", false, true, true, true],
       ["Runtime metrics (Prometheus)", false, false, false, true],
     ].map(([label, e, s, p, ent]) => (
-      <div className="features-row" key={label}>
+      <div className="features-row" key={String(label)}>
         <div className="feature-name">{label}</div>
         {[e, s, p, ent].map((enabled, i) => (
           <div key={i} className="feature-cell">

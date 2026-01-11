@@ -7,7 +7,7 @@ import Industries from "./pages/Industries";
 import Pricing from "./pages/Pricing";
 import Support from "./pages/Support";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Signup from "./pages/SignUp";
 import CreateAccount from "./pages/CreateAccount";
 import ForgotPassword from "./pages/ForgotPassword";
 

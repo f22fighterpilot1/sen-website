@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import WideSlideshow from "../components/WideSlideshow";
+import shuttleVideo from "../media/videos/space_shuttle_trim.mp4";
 
-const LOGOS = ["Acme", "Waypoint", "SeatGeek", "Lufthansa", "Indeed", "GSK", "Databricks"];
+// const LOGOS = ["Acme", "Waypoint", "SeatGeek", "Lufthansa", "Indeed", "GSK", "Databricks"];
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       playsInline
       preload="auto"
     >
-      <source src="/src/media/videos/space_shuttle_trim.mp4" type="video/mp4" />
+      <source src={shuttleVideo} type="video/mp4" />
     </video>
     <div className="home2-hero-overlay" />
   </div>
