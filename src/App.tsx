@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/SignUp";
 import CreateAccount from "./pages/CreateAccount";
 import ForgotPassword from "./pages/ForgotPassword";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
 
 
 
@@ -27,8 +29,8 @@ export default function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/create-account" element={<CreateAccount />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
-
-
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                
             </Route>
         </Routes>
     );
