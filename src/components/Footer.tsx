@@ -33,8 +33,8 @@ export default function Footer() {
                 By submitting this form, you acknowledge and agree that SymbolicEngine will
                 process your personal information in accordance with the <NavLink to="/privacy" className="footer-link">
   Privacy Policy
-</NavLink>
-.
+</NavLink>.
+
                 </p>
             </div>
             </section>
@@ -42,7 +42,9 @@ export default function Footer() {
             <div className="container footer-extra-inner">
                 <div className="footer-extra-left">
                 {/* LEFT COLUMN CONTENT */}
-                <span className="footer-left">© 2025 SymbolicEngine</span>
+                <span className="footer-left">© 2025 SymbolicEngine</span> <NavLink to="/terms-of-service" className="footer-link">
+  Terms Of Service
+</NavLink>
                 {/*<strong>Resources</strong>
                 <ul>
                     <li><a href="/how-it-works">How it works</a></li>

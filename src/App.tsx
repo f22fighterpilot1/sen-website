@@ -11,6 +11,7 @@ import Signup from "./pages/SignUp";
 import CreateAccount from "./pages/CreateAccount";
 import ForgotPassword from "./pages/ForgotPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 
 
@@ -30,7 +31,9 @@ export default function App() {
                 <Route path="/create-account" element={<CreateAccount />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
-                
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+
+
             </Route>
         </Routes>
     );

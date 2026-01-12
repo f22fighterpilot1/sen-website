@@ -2,7 +2,7 @@ export default function PrivacyPolicy() {
   return (
     <section className="section">
       <div className="container">
-        <h1>SymbolicEngine (SEN) Privacy Policy</h1>
+        <h1>SymbolicEngine Privacy Policy</h1>
         <p className="muted">Last updated: January 11, 2026</p>
 
         <h2>1. Overview</h2>
