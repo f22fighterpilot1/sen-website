@@ -95,16 +95,6 @@ export default function HowItWorks() {
             help ensure what you planned is what you deploy.
           </p>
 
-          {/* Diagram / image box */}
-          <div className="tutorial-media card tutorial-diagram">
-            {/* Replace with your image path */}
-            <img
-              src="/images/tutorial-diagram.png"
-              alt="Workflow diagram"
-              loading="lazy"
-            />
-          </div>
-
           <h2>Collaborate</h2>
 
           <p>
