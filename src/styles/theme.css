@@ -417,6 +417,18 @@
   text-align: right;        /* align text inside */
 }
 
+.footer-legal-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;        /* exact spacing you requested */
+  flex-wrap: wrap; /* safe on very small screens */
+}
+
+.footer-copy {
+  color: var(--faint);
+  font-size: 13px;
+}
+
 
 .footer-extra strong {
   display: block;
@@ -466,6 +478,8 @@
     gap: 22px;
   }
 }
+
+
 
 
 /* ================= RESPONSIVE ================= */
@@ -522,11 +536,7 @@
     text-align: center;
   }
 
-  .footer-left,
-  .footer-right {
-    justify-self: center;
-    text-align: center;
-  }
+
 }
 
 

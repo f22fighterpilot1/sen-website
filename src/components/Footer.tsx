@@ -40,11 +40,17 @@ export default function Footer() {
             </section>
             <section className="footer-extra">
             <div className="container footer-extra-inner">
-                <div className="footer-extra-left">
-                {/* LEFT COLUMN CONTENT */}
-                <span className="footer-left">© 2025 SymbolicEngine</span> <NavLink to="/terms-of-service" className="footer-link">
-  Terms Of Service
-</NavLink>
+            <div className="footer-extra-left footer-legal-row">
+            <span className="footer-copy">© 2026 SymbolicEngine</span>
+
+            <NavLink to="/terms-of-service" className="footer-link">
+                Terms of Service
+            </NavLink>
+
+            <NavLink to="/privacy" className="footer-link">
+                Privacy Policy
+            </NavLink>
+
                 {/*<strong>Resources</strong>
                 <ul>
                     <li><a href="/how-it-works">How it works</a></li>
