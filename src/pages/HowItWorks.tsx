@@ -29,15 +29,15 @@ export default function HowItWorks() {
         <div className="tutorial-body">
 
           <p>
-            SymbolicEngine supports deterministic workflows for validating
-            changes and verifying outcomes before deployment.
+            SymbolicEngine performs deterministic symbol recognition and verification.
+            Given the same input, the output is identical.
           </p>
 
           <ul className="tutorial-bullets">
-            <li>Deterministic validation across environments</li>
-            <li>Repeatable, version-controlled configurations</li>
-            <li>Traceable changes with clear diffs and reviews</li>
-            <li>Safer collaboration through predictable outputs</li>
+            <li>Deterministic recognition and scoring</li>
+            <li>Repeatable results across environments</li>
+            <li>Explicit confidence and abstention rules</li>
+            <li>No model drift or hidden behavior</li>
           </ul>
 
           <section className="home2-section">
@@ -81,39 +81,34 @@ export default function HowItWorks() {
 
           </section>
 
+          <h2>Standardize Recognition and Verification</h2>
+
           <p>
-            Interact with your platforms and services through a consistent model.
-            Define resources once, reuse patterns, and scale governance without
-            adding friction to delivery.
+            Recognition behaves the same everywhere.
+            Local tests and production match.
+            What you validate is what you deploy.
           </p>
 
-          <h2>Standardize your deployment workflow</h2>
-          
-          <p>
-            Compose configurations into reusable modules and keep your workflow
-            consistent from development through production. Deterministic checks
-            help ensure what you planned is what you deploy.
-          </p>
-
-          <h2>Collaborate</h2>
+          <h2>Collaborate with Confidence</h2>
 
           <p>
-            Interact with your platforms and services through a consistent model.
-            Define resources once, reuse patterns, and scale governance without
-            adding friction to delivery.
+            Templates and rules are explicit.
+            Changes can be reviewed and tested.
+            No silent behavior changes.
           </p>
 
           <h2>Quick Start</h2>
 
           <p>
-            Compose configurations into reusable modules and keep your workflow
-            consistent from development through production. Deterministic checks
-            help ensure what you planned is what you deploy.
+            Integrate via API, SDK, or container.
+            Start recognizing symbols immediately.
+            Enable verification as needed.
           </p>
           <h2>Next Steps</h2>
 
           <p>
-            Now that you are familiar with its core concepts, you are ready to implement SymbolicEngine into your projects.
+            You are ready to integrate SymbolicEngine.
+            Apply it to recognition, verification, and trust-critical workflows.
           </p>
         </div>
       </div>
