@@ -2486,3 +2486,108 @@
     grid-template-columns: 1fr;
   }
 }
+/* ================= HOW IT WORKS (Alternating bands) ================= */
+
+.hiw {
+  padding: 44px 0 24px;
+}
+
+.hiw-head {
+  padding: 44px 0 22px;
+}
+
+.hiw-section {
+  padding: 72px 0;
+}
+
+.hiw-section + .hiw-section {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* Flip every other row */
+.hiw-section.is-flipped .hiw-media {
+  order: 2;
+}
+.hiw-section.is-flipped .hiw-copy {
+  order: 1;
+}
+
+/* Media frame */
+.hiw-media {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+}
+
+.hiw-media--plain {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Video */
+.hiw-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Copy */
+.hiw-copy {
+  padding-top: 8px;
+}
+
+.hiw-kicker {
+  width: 34px;
+  height: 4px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  opacity: 0.95;
+}
+
+.hiw-title {
+  font-size: clamp(2.1rem, 3.3vw, 3.0rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.hiw-body {
+  max-width: 54ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hiw-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hiw-section {
+    padding: 54px 0;
+  }
+
+  .hiw-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .hiw-section.is-flipped .hiw-media,
+  .hiw-section.is-flipped .hiw-copy {
+    order: initial;
+  }
+}
+
