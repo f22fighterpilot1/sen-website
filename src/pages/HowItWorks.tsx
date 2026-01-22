@@ -32,7 +32,6 @@ export default function HowItWorks() {
             </div>
 
             <div className="hiw-copy">
-              <div className="hiw-kicker" aria-hidden="true" />
               <h2 className="hiw-title">Deterministic symbol recognition</h2>
               <p className="hiw-body">
                 SymbolicEngine performs deterministic symbol recognition and verification.
@@ -53,10 +52,9 @@ export default function HowItWorks() {
       {/* UNDER THE HOOD — FULL-BLEED, CENTERED (NOT IN CONTAINER, NOT ALTERNATING) */}
       <section className="hiw-underhood-band">
         <div className="hiw-underhood-inner">
-          <div className="hiw-kicker" aria-hidden="true" />
-          <h2 className="hiw-underhood-title">Under the Hood</h2>
+          <h2 className="hiw-title">Under the Hood</h2>
 
-          <p className="hiw-underhood-sub">
+          <p className="home2-p">
             SEN extracts structure, normalizes geometry, encodes invariants, and performs deterministic
             comparisons against explicit templates—producing a verifiable output with no probabilistic drift.
           </p>
@@ -140,9 +138,8 @@ export default function HowItWorks() {
             </div>
 
             <div className="hiw-copy">
-              <div className="hiw-kicker" aria-hidden="true" />
               <h2 className="hiw-title">Standardize Recognition and Verification</h2>
-              <p className="hiw-body">
+              <p className="home2-p">
                 Recognition behaves the same everywhere. Local tests and production match.
                 What you validate is what you deploy.
               </p>
@@ -163,9 +160,8 @@ export default function HowItWorks() {
             </div>
 
             <div className="hiw-copy">
-              <div className="hiw-kicker" aria-hidden="true" />
               <h2 className="hiw-title">Collaborate with Confidence</h2>
-              <p className="hiw-body">
+              <p className="home2-p">
                 Templates and rules are explicit. Changes can be reviewed and tested.
                 No silent behavior changes.
               </p>
@@ -183,9 +179,8 @@ export default function HowItWorks() {
             </div>
 
             <div className="hiw-copy">
-              <div className="hiw-kicker" aria-hidden="true" />
               <h2 className="hiw-title">Quick Start</h2>
-              <p className="hiw-body">
+              <p className="home2-p">
                 Integrate via API, SDK, or container. Start recognizing symbols immediately.
                 Enable verification as needed.
               </p>
@@ -208,9 +203,8 @@ export default function HowItWorks() {
             </div>
 
             <div className="hiw-copy">
-              <div className="hiw-kicker" aria-hidden="true" />
               <h2 className="hiw-title">Next Steps</h2>
-              <p className="hiw-body">
+              <p className="home2-p">
                 Start with the demo, then move to a template-driven integration path based on your environment and
                 compliance needs.
               </p>

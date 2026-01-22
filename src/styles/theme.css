@@ -2181,8 +2181,8 @@
   gap: 32px 40px;
   justify-content: center; /* ← centers grid block */
   align-items: center;
-  margin-top: 36px;    
-  margin-bottom: 200px;
+  margin-top: -50px;    
+  margin-bottom: 10px;
 
 }
 
@@ -2498,10 +2498,6 @@
 
 .hiw-section {
   padding: 72px 0;
-}
-
-.hiw-section + .hiw-section {
-  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .hiw-grid {
