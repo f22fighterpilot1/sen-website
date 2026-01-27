@@ -51,6 +51,10 @@ export default function Footer() {
                 Privacy Policy
             </NavLink>
 
+                <NavLink to="/portal" className="footer-link">
+                Licensing
+                </NavLink>
+
                 {/*<strong>Resources</strong>
                 <ul>
                     <li><a href="/how-it-works">How it works</a></li>
