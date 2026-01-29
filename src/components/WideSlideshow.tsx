@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 type Slide = {
   image: string;
-  logo?: string;
+  label?: string;
   quote: string;
   name: string;
   title: string;
@@ -10,28 +10,28 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   {
-    image: "/src/media/images/home_image.png",
-    logo: "DECATHLON",
+    image: "/media/images/deterministic.png",
+    label: "Determinism",
     quote:
-      "Deterministic perception replaces probabilistic guesswork with auditable structure.",
-    name: "Kevin Defries",
-    title: "Information Systems Engineer, Decathlon",
+        "Same input → same output. SEN is deterministic by design, so results are repeatable across environments, deployments, and time.",
+    name: "SymbolicEngine",
+    title: "Deterministic Recognition Core",
   },
   {
-    image: "/src/media/images/eyeball.png",
-    logo: "AEROSPACE",
+    image: "/media/images/inspection.png",
+    label: "Inspection & Auditability",
     quote:
-      "Repeatable interpretation across environments is mandatory for safety-critical systems.",
-    name: "Program Lead",
-    title: "Aerospace & Defense",
+        "SEN produces traceable decisions: confidence, abstention, and inspection signals that make recognition debuggable and audit-ready.",
+    name: "SymbolicEngine",
+    title: "Inspectable Pipeline Outputs",
   },
   {
-    image: "/src/media/images/structural_normalization.png",
-    logo: "FINANCIAL SERVICES",
+    image: "/media/images/the-case-for-on-prem-ai-data-centers.jpg",
+    label: "Deployment Options",
     quote:
-      "Auditable recognition turns compliance from a cost center into infrastructure.",
-    name: "CTO",
-    title: "Tier-1 Bank",
+        "Choose the integration path that fits your environment: direct API access, an API-backed SDK, on-prem Docker deployment, or a fully embedded SDK.",
+    name: "SymbolicEngine",
+    title: "API • SDK • Docker • Embedded",
   },
 ];
 
@@ -49,50 +49,40 @@ export default function WideSlideshow() {
   const slide = SLIDES[index];
 
   return (
-    <section className="wide-slideshow">
-      <div className="wide-slideshow-inner">
-        <div className="wide-slideshow-card">
-          {/* LEFT */}
-          <div className="wide-slideshow-left">
-            {slide.logo && (
-              <div className="wide-slideshow-logo">{slide.logo}</div>
-            )}
-            <img
-              src={slide.image}
-              alt=""
-              className="wide-slideshow-left-img"
-            />
+      <section className="wide-slideshow">
+        <div className="wide-slideshow-inner">
+          <div className="wide-slideshow-card">
+            {/* LEFT */}
+            <div className="wide-slideshow-left">
+              {slide.label && <div className="wide-slideshow-logo">{slide.label}</div>}
 
-            {/* dots */}
-            <div className="wide-slideshow-dots">
-              {SLIDES.map((_, i) => (
-                <button
-                  key={i}
-                  className={`wide-slideshow-dot ${
-                    i === index ? "is-active" : ""
-                  }`}
-                  onClick={() => setIndex(i)}
-                  aria-label={`Go to slide ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
+              <img src={slide.image} alt="" className="wide-slideshow-left-img" />
 
-          {/* RIGHT */}
-          <div className="wide-slideshow-right">
-            <div className="wide-slideshow-quoteMark">“</div>
-
-            <p className="wide-slideshow-quote">{slide.quote}</p>
-
-            <div className="wide-slideshow-person">
-              <div className="wide-slideshow-name">{slide.name}</div>
-              <div className="wide-slideshow-title">{slide.title}</div>
+              {/* dots */}
+              <div className="wide-slideshow-dots">
+                {SLIDES.map((_, i) => (
+                    <button
+                        key={i}
+                        className={`wide-slideshow-dot ${i === index ? "is-active" : ""}`}
+                        onClick={() => setIndex(i)}
+                        aria-label={`Go to slide ${i + 1}`}
+                    />
+                ))}
+              </div>
             </div>
 
+            {/* RIGHT */}
+            <div className="wide-slideshow-right">
 
+              <p className="wide-slideshow-quote">{slide.quote}</p>
+
+              <div className="wide-slideshow-person">
+                <div className="wide-slideshow-name">{slide.name}</div>
+                <div className="wide-slideshow-title">{slide.title}</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

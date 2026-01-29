@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger button (mobile only) */}
         <button
-          className="icon-btn mobile"
+          className="icon-btn mobile nav-hamburger"
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
