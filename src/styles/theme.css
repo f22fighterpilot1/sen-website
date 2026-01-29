@@ -32,6 +32,11 @@
 
 /* ================= NAV ================= */
 
+/* Mobile hamburger: force far right */
+.nav-hamburger {
+    margin-left: auto;
+}
+
 .nav {
     position: sticky;
     top: 0;
@@ -469,17 +474,51 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+/* ===== Footer mobile fix ===== */
+@media (max-width: 640px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
 
+    /* Center the legal links row (Terms / Privacy / Licensing) */
+    .footer-legal-row {
+        justify-content: center;
+    }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .footer-extra-inner {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
+    /* If you have an "extra" footer area with right column text */
+    .footer-extra-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-extra-right {
+        justify-self: center;
+        text-align: center;
+    }
 }
 
+/* Footer: mobile alignment fixes */
+@media (max-width: 768px) {
+    /* this exists already, keep it */
+    .footer-extra-inner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
 
+    /* NEW: stop the right column from being pushed right */
+    .footer-extra-right {
+        justify-self: center;
+        text-align: center;
+    }
+
+    /* NEW: center the legal links row when it wraps */
+    .footer-legal-row {
+        justify-content: center;
+    }
+}
 
 
 /* ================= RESPONSIVE ================= */
@@ -535,8 +574,9 @@
     gap: 8px;
     text-align: center;
   }
-
-
+    .footer-legal-row {
+        justify-content: center;
+    }
 }
 
 
@@ -1288,13 +1328,25 @@
 /* Responsive */
 /* ================= HOME v2 — Mobile ================= */
 @media (max-width: 920px) {
+    /* HERO: center content vertically on mobile */
+    .home2-hero-grid {
+        margin-top: 0;                 /* overrides the desktop 100px */
+        justify-content: center;       /* vertical centering (flex column) */
+        min-height: calc(100vh - 72px);
+        transform: translateY(-6vh);
+    }
   /* hero + sections become single column */
   .home2-hero-grid,
   .home2-section-grid {
     grid-template-columns: 1fr;
     gap: 22px;
   }
-
+    /* FIX: remove desktop CTA padding on mobile */
+    .home2-cta {
+        padding: 0;
+        justify-content: flex-start;
+        margin: 0;
+    }
   /* give mobile comfortable side padding for ALL hero content */
   .home2-hero-grid,
   .home2-logo-row,
@@ -2588,9 +2640,9 @@
 }
 /* ================= LICENSING PORTAL (REPLACE ENTIRE SECTION) ================= */
 
-/* Portal-only light theme variables so nothing is white-on-white */
+/* portal-only light theme variables so nothing is white-on-white */
 .portal {
-  /* Portal palette */
+  /* portal palette */
   --p-bg: #ffffff;
   --p-surface: #ffffff;
   --p-surface-2: #f6f7fb;
