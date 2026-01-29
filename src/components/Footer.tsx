@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function Footer() {
     return (
         <footer className="footer">
@@ -30,15 +31,30 @@ export default function Footer() {
                 </div>
                 <p className="subscribe-disclaimer">
                 By submitting this form, you acknowledge and agree that SymbolicEngine will
-                process your personal information in accordance with the Privacy Policy.
+                process your personal information in accordance with the <NavLink to="/privacy" className="footer-link">
+  Privacy Policy
+</NavLink>.
+
                 </p>
             </div>
             </section>
             <section className="footer-extra">
             <div className="container footer-extra-inner">
-                <div className="footer-extra-left">
-                {/* LEFT COLUMN CONTENT */}
-                <span className="footer-left">© 2025 SymbolicEngine</span>
+            <div className="footer-extra-left footer-legal-row">
+            <span className="footer-copy">© 2026 SymbolicEngine</span>
+
+            <NavLink to="/terms-of-service" className="footer-link">
+                Terms of Service
+            </NavLink>
+
+            <NavLink to="/privacy" className="footer-link">
+                Privacy Policy
+            </NavLink>
+
+                <NavLink to="/portal" className="footer-link">
+                Licensing
+                </NavLink>
+
                 {/*<strong>Resources</strong>
                 <ul>
                     <li><a href="/how-it-works">How it works</a></li>

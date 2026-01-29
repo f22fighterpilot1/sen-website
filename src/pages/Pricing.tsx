@@ -43,9 +43,9 @@ export default function Pricing() {
                 Single and multi-year plans available with preferred pricing for
                 maximum ROI.
               </p>
-              <a href="#" className="pricing-link">
-                Contact sales →
-              </a>
+              <NavLink to="/store" className="pricing-link">
+              Contact sales →
+              </NavLink>
             </div>
 
             <div className="card pricing-card">
