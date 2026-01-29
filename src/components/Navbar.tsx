@@ -5,7 +5,7 @@ const links = [
   { to: "/how-it-works", label: "How it works" },
   { to: "/industries", label: "Industries" },
   { to: "/pricing", label: "Pricing" },
-  { to: "/support", label: "Support" },
+  { to: "/support", label: "Contact Us" },
 ];
 
 
@@ -68,8 +68,8 @@ export default function Navbar() {
 </NavLink>
 
 
-  <NavLink to="/demo" className="btn btn-primary">
-    Launch Demo
+  <NavLink to="/support" className="btn btn-primary">
+    Request Demo
   </NavLink>
 </div>
 
@@ -117,8 +117,8 @@ export default function Navbar() {
             </div>
 
             <div className="mobile-cta">
-              <NavLink to="/demo" className="btn btn-primary" onClick={close}>
-                Launch Demo
+              <NavLink to="/support" className="btn btn-primary" onClick={close}>
+                Request Demo
               </NavLink>
             </div>
           </div>

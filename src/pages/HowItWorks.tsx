@@ -210,10 +210,10 @@ export default function HowItWorks() {
               </p>
 
               <div className="hiw-actions">
-                <NavLink to="/demo" className="btn btn-primary">
-                  Launch demo
+                <NavLink to="/support" className="btn btn-primary">
+                  Request demo
                 </NavLink>
-                <NavLink to="/pricing" className="btn">
+                <NavLink to="/support" className="btn">
                   Pricing →
                 </NavLink>
               </div>

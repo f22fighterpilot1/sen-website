@@ -98,7 +98,7 @@ export default function LicensingPortal() {
   const breadcrumb = useMemo(() => {
     if (section === "entitlements") return "Entitlements › Leases/Perpetuals";
     if (section === "activations") return "Activations › Manage Activations";
-    if (section === "settings") return "Settings › Licensing Portal Access";
+    if (section === "settings") return "Settings › Licensing portal Access";
     return "Messages › Alerts";
   }, [section]);
 

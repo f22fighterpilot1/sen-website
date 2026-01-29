@@ -24,7 +24,7 @@ import DownloadLicense from "./pages/portal/DownloadLicense";
 export default function App() {
   return (
     <Routes>
-      {/* ✅ Portal routes: render WITHOUT the main site Layout/navbar/footer */}
+      {/* ✅ portal routes: render WITHOUT the main site Layout/navbar/footer */}
       <Route path="/portal" element={<LicensingPortal />} />
       <Route path="/portal/licenses" element={<Licenses />} />
       <Route path="/portal/activate" element={<Activate />} />

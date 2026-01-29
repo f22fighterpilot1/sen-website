@@ -2588,9 +2588,9 @@
 }
 /* ================= LICENSING PORTAL (REPLACE ENTIRE SECTION) ================= */
 
-/* Portal-only light theme variables so nothing is white-on-white */
+/* portal-only light theme variables so nothing is white-on-white */
 .portal {
-  /* Portal palette */
+  /* portal palette */
   --p-bg: #ffffff;
   --p-surface: #ffffff;
   --p-surface-2: #f6f7fb;

@@ -40,8 +40,8 @@ export default function Home() {
             <p className="home2-sub">
               SymbolicEngine (SEN) is a geometry-aware perceptual system that recognizes symbols by structure, topology, and invariants — not probabilities.
               < br/> < br/>
-              <NavLink to="/demo" className="btn btn-primary">
-                Launch demo
+              <NavLink to="/support" className="btn btn-primary">
+                Request demo
               </NavLink>
               <NavLink to="/how-it-works" className="btn">
                 How it works →
