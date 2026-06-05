@@ -26,7 +26,7 @@ export default function Login() {
               </button>
 
               <p className="auth-foot">
-                Prefer email? <strong>contact@symbolicengine.ai</strong>
+                Prefer email? <strong>drew@symbolicengine.ai</strong>
               </p>
 
               <p className="auth-foot">

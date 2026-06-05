@@ -3076,3 +3076,51 @@
     justify-items: start;
   }
 }
+/* Balance the vertical spacing around the Why SEN block */
+.home2-hero + .home2-section {
+    margin-top: 44px;
+}
+
+.home2-hero + .home2-section .home2-section-grid {
+    margin-bottom: 44px;
+}
+/* Recognition Pipeline: tighten only the gap between intro copy and cards */
+.home2-pipeline-section .home2-section-grid {
+    row-gap: 44px;
+}
+
+/* Tighten only the gap between Recognition Pipeline copy and its 3 cards */
+.home2-pipeline-section + .home2-section {
+    margin-top: 24px;
+}
+/* Larger demo video on How It Works */
+.hiw .hiw-section:first-of-type .hiw-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.hiw .hiw-section:first-of-type .hiw-media {
+    max-width: 860px;
+}
+
+.hiw .hiw-section:first-of-type .hiw-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    object-fit: contain;
+    background: #05070d;
+}
+
+@media (max-width: 920px) {
+    .hiw .hiw-section:first-of-type .hiw-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hiw .hiw-section:first-of-type .hiw-media {
+        max-width: none;
+    }
+}
+.nowrap {
+    white-space: nowrap;
+}
