@@ -10,41 +10,44 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   {
-    image: "/media/images/deterministic.png",
+    image: "/media/images/Demo1.png",
     label: "Determinism",
     quote:
-        "Same input → same output. SEN is deterministic by design, so results are repeatable across environments, deployments, and time.",
-    name: "SymbolicEngine",
-    title: "Deterministic Recognition Core",
+        "Same input → same output. SEN's unmatched perception is deterministic by design, so results are repeatable across environments, deployments, and time.",
+    name: "",
+    title: "",
   },
   {
-    image: "/media/images/inspection.png",
+    image: "/media/images/Demo2.png",
+    label: "Symbol Slot Evidence",
+    quote:
+        "For the first time in computer vision, recognition is no longer a black box. SEN exposes each symbol position as an inspectable slot, showing confidence, evidence, and matching signals behind the final output.",
+    name: "",
+    title: "",
+  },
+  {
+    image: "/media/images/Demo3.png",
     label: "Inspection & Auditability",
     quote:
-        "SEN produces traceable decisions: confidence, abstention, and inspection signals that make recognition debuggable and audit-ready.",
-    name: "SymbolicEngine",
-    title: "Inspectable Pipeline Outputs",
-  },
-  {
-    image: "/media/images/the-case-for-on-prem-ai-data-centers.jpg",
-    label: "Deployment Options",
-    quote:
-        "Choose the integration path that fits your environment: direct API access, an API-backed SDK, on-prem Docker deployment, or a fully embedded SDK.",
-    name: "SymbolicEngine",
-    title: "API • SDK • Docker • Embedded",
+        "Inspect SEN's advanced matching trace: JSON-level logs expose the recognition path, candidate comparisons, resolver decisions, and audit evidence behind each output.",
+    name: "",
+    title: "",
   },
 ];
 
 export default function WideSlideshow() {
   const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % SLIDES.length);
     }, 5000);
 
     return () => clearInterval(id);
-  }, []);
+  }, [isPaused]);
 
   const slide = SLIDES[index];
 
@@ -52,14 +55,24 @@ export default function WideSlideshow() {
       <section className="wide-slideshow">
         <div className="wide-slideshow-inner">
           <div className="wide-slideshow-card">
-            {/* LEFT */}
             <div className="wide-slideshow-left">
               {slide.label && <div className="wide-slideshow-logo">{slide.label}</div>}
 
-              <img src={slide.image} alt="" className="wide-slideshow-left-img" />
+              <div className="wide-slideshow-image-frame">
+                <img src={slide.image} alt="" className="wide-slideshow-left-img" />
+              </div>
 
-              {/* dots */}
               <div className="wide-slideshow-dots">
+                <button
+                    type="button"
+                    className="wide-slideshow-control-dot"
+                    onClick={() => setIsPaused((value) => !value)}
+                    aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
+                    title={isPaused ? "Play" : "Pause"}
+                >
+                  {isPaused ? "▶" : "Ⅱ"}
+                </button>
+
                 {SLIDES.map((_, i) => (
                     <button
                         key={i}
@@ -71,9 +84,7 @@ export default function WideSlideshow() {
               </div>
             </div>
 
-            {/* RIGHT */}
             <div className="wide-slideshow-right">
-
               <p className="wide-slideshow-quote">{slide.quote}</p>
 
               <div className="wide-slideshow-person">

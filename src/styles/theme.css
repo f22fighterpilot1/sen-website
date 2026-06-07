@@ -639,6 +639,213 @@
     }
 }
 
+/* ================= DEPLOYMENT INQUIRY ================= */
+
+.deployment-page {
+    min-height: calc(100vh - 72px);
+    padding: 72px 0 80px;
+    background: transparent;
+}
+
+.deployment-shell {
+    width: min(var(--max), calc(100% - 48px));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 540px);
+    gap: 72px;
+    align-items: start;
+}
+
+.deployment-copy {
+    padding-top: 22px;
+}
+
+.deployment-eyebrow {
+    margin: 0 0 14px;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.deployment-copy h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5.6rem);
+    line-height: 0.98;
+}
+
+.deployment-copy > p:not(.deployment-eyebrow) {
+    max-width: 620px;
+    margin: 24px 0 0;
+    color: rgba(255,255,255,0.78);
+    font-size: 1.15rem;
+    line-height: 1.55;
+}
+
+.deployment-focus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.deployment-focus span {
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.045);
+    color: rgba(255,255,255,0.82);
+    font-size: 0.88rem;
+    font-weight: 650;
+}
+
+.deployment-panel {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.deployment-panel-rule {
+    display: none;
+}
+
+.deployment-panel h2 {
+    margin: 0 0 20px;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.deployment-form {
+    display: grid;
+    gap: 16px;
+    max-width: 520px;
+}
+
+.deployment-form label {
+    display: grid;
+    gap: 7px;
+    color: rgba(255,255,255,0.76);
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.deployment-form input,
+.deployment-form select,
+.deployment-form textarea {
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.045);
+    color: var(--text);
+    padding: 13px 14px;
+    outline: none;
+    font: inherit;
+}
+
+.deployment-form textarea {
+    resize: vertical;
+}
+
+.deployment-form input:focus,
+.deployment-form select:focus,
+.deployment-form textarea:focus {
+    border-color: rgba(79, 140, 255, 0.72);
+    box-shadow: 0 0 0 3px rgba(79, 140, 255, 0.16);
+}
+
+.deployment-form option {
+    color: #0b1020;
+}
+
+.deployment-form em {
+    color: rgba(255, 105, 105, 0.96);
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 650;
+}
+
+.deployment-submit {
+    width: 100%;
+    border: 1px solid rgba(115, 139, 255, 0.5);
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(79, 140, 255, 0.95), rgba(124, 92, 255, 0.95));
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+    padding: 13px 18px;
+    transition: transform 140ms ease, filter 140ms ease;
+}
+
+.deployment-submit:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+}
+
+.deployment-back,
+.deployment-secondary {
+    width: fit-content;
+    border: 0;
+    background: transparent;
+    color: rgba(145, 165, 255, 0.95);
+    cursor: pointer;
+    font-weight: 750;
+    padding: 0;
+}
+
+.deployment-secondary {
+    display: inline-flex;
+    margin-top: 18px;
+    font-size: 0.9rem;
+}
+
+.deployment-check {
+    grid-template-columns: 18px 1fr;
+    align-items: start;
+    gap: 10px !important;
+    color: rgba(255,255,255,0.76);
+    line-height: 1.45;
+}
+
+.deployment-check input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    padding: 0;
+}
+
+.deployment-check em {
+    grid-column: 2;
+}
+
+@media (max-width: 980px) {
+    .deployment-shell {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .deployment-copy h1 {
+        font-size: clamp(2.5rem, 12vw, 4.5rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .deployment-page {
+        padding: 44px 0 56px;
+    }
+
+    .deployment-shell {
+        width: min(100% - 28px, var(--max));
+    }
+
+    .deployment-panel {
+        padding: 0;
+    }
+}
+
 /* ================= FEATURES TABLE ================= */
 
 .feature-tabs {
@@ -3075,4 +3282,197 @@
   .portal-customer {
     justify-items: start;
   }
+}
+/* Balance the vertical spacing around the Why SEN block */
+.home2-hero + .home2-section {
+    margin-top: 44px;
+}
+
+.home2-hero + .home2-section .home2-section-grid {
+    margin-bottom: 44px;
+}
+/* Recognition Pipeline: tighten only the gap between intro copy and cards */
+.home2-pipeline-section .home2-section-grid {
+    row-gap: 44px;
+}
+
+/* Tighten only the gap between Recognition Pipeline copy and its 3 cards */
+.home2-pipeline-section + .home2-section {
+    margin-top: 24px;
+}
+/* Larger demo video on How It Works */
+.hiw .hiw-section:first-of-type .hiw-grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.hiw .hiw-section:first-of-type .hiw-media {
+    max-width: 860px;
+}
+
+.hiw .hiw-section:first-of-type .hiw-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    object-fit: contain;
+    background: #05070d;
+}
+
+@media (max-width: 920px) {
+    .hiw .hiw-section:first-of-type .hiw-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hiw .hiw-section:first-of-type .hiw-media {
+        max-width: none;
+    }
+}
+.nowrap {
+    white-space: nowrap;
+}
+
+/* Keep slideshow size, make image area fill more of it */
+.wide-slideshow-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.wide-slideshow-card {
+    grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+    gap: 32px;
+    align-items: center;
+}
+
+.wide-slideshow-left {
+    min-width: 0;
+}
+
+.wide-slideshow-left-img,
+.wide-slideshow-card img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block;
+}
+
+.wide-slideshow-right {
+    max-width: 390px;
+}
+/* Fixed screenshot frame so Demo1/Demo2/Demo3 never resize the slideshow */
+.wide-slideshow-image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.wide-slideshow-image-frame .wide-slideshow-left-img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+}
+/* Force every slideshow screenshot to render at the same size */
+.wide-slideshow-image-frame {
+    width: 100%;
+    height: 430px;
+    overflow: hidden;
+}
+
+.wide-slideshow-left-img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 900px) {
+    .wide-slideshow-image-frame {
+        height: 320px;
+    }
+}
+
+.wide-slideshow-dots {
+    align-items: center;
+}
+
+.wide-slideshow-left {
+    min-width: 0;
+    display: grid;
+    gap: 14px;
+}
+
+.wide-slideshow-dots {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+}
+
+.wide-slideshow-control-dot {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.25);
+    color: var(--text);
+    font-size: 8px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.wide-slideshow-control-dot:hover {
+    background: var(--accent);
+}
+/* Tighten How It Works chart spacing */
+.hiw-standardize-section {
+    padding-bottom: 12px;
+}
+
+.hiw-standardize-section + .hiw-chart-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -40px;
+    margin-bottom: -10px;
+}
+
+.hiw-chart-image {
+    width: min(100%, 600px);
+    display: block;
+    margin: 0 0 0 auto;
+    border-radius: 14px;
+}
+
+.hiw-chart-section + .hiw-section {
+    padding-top: 24px;
+}
+.check-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+
+.check-bullets li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.check-bullets li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: #22c55e;
+    font-size: 1.3em;
+    font-weight: 900;
 }

@@ -32,9 +32,9 @@ const modalContent: Record<string, IndustryModalContent> = {
       {
         heading: "Aerospace & Defense",
         paragraphs: [
-          "Aerospace and defense systems cannot tolerate probabilistic interpretation. When symbols, markings, or schematics are misread, the outcome is not a degraded user experience—it is mission failure, asset loss, or human death. Probabilistic vision models are therefore not “good enough”; they are an operational liability in safety-critical and classified pipelines.",
-          "SEN introduces something this sector has never had at scale: deterministic visual recognition. Same input, same output—across time, deployments, air-gapped environments, and audit cycles. No training drift, no silent regressions, no stochastic behavior. Outputs are reproducible, explainable, and compatible with strict verification regimes.",
-          "This becomes the missing substrate for certified autonomy, ISR analysis, weapons validation, maintenance diagnostics, and classified documentation workflows. If your stack relies on neural inference, confidence thresholds, or retraining cycles, you cannot prove repeatability under deep forensic scrutiny. SEN is competing with physics—your system is competing with randomness.",
+          "Aerospace and defense systems cannot tolerate probabilistic interpretation. When symbols are misread, the outcome is not a degraded user experience - it is mission failure, asset loss, or loss of life. Probabilistic vision models are therefore not “good enough”; they are an operational liability in safety-critical and classified pipelines.",
+          "SEN introduces something this sector has never had at scale: deterministic visual recognition. Same input, same output - across time, deployments, air-gapped environments, and audit cycles. No training drift, no silent regressions, no stochastic behavior. Outputs are reproducible, explainable, and compatible with strict verification regimes.",
+          "This becomes the missing substrate for certified autonomy, ISR analysis, weapons validation, maintenance diagnostics, and classified documentation workflows. If your stack relies on neural inference, confidence thresholds, or retraining cycles, you cannot prove repeatability under deep forensic scrutiny. SEN is competing with physics - your system is competing with randomness.",
         ],
       },
     ],
@@ -46,8 +46,8 @@ const modalContent: Record<string, IndustryModalContent> = {
       {
         heading: "Financial Services",
         paragraphs: [
-          "Financial institutions are suffocating under compliance overhead because their visual processing stack is fundamentally non-auditable. ML-based OCR and document systems can’t explain why a form was interpreted a certain way—only that it probably was—creating manual review backlogs, fraud exposure, and regulator friction.",
-          "SEN makes visual interpretation replayable and defensible: deterministic recognition of forms, signatures, stamps, and symbols enables exact reproducibility, chain-of-custody verification, and regulator-proof audit trails. When something is accepted or rejected, SEN can provide a precise structural basis—not a probability score.",
+          "Financial institutions are suffocating under compliance overhead because their visual processing stack is fundamentally non-auditable. ML-based OCR and document systems can’t explain why a form was interpreted a certain way - only that it probably was - creating manual review backlogs, fraud exposure, and regulator friction.",
+          "SEN makes visual interpretation replayable and defensible: deterministic recognition enables exact reproducibility, chain-of-custody verification, and regulator-proof audit trails. When something is accepted or rejected, SEN can provide a precise structural basis - not a probability score.",
           "If your product depends on “confidence scores” or “human-in-the-loop validation” as the core mechanism, you are admitting the system is guessing. In compliance-critical workflows, guesses lose. SEN will relegate probabilistic stacks to low-risk tooling while it owns the auditable core.",
         ],
       },
@@ -60,9 +60,9 @@ const modalContent: Record<string, IndustryModalContent> = {
       {
         heading: "Manufacturing",
         paragraphs: [
-          "Manufacturing environments punish probabilistic vision: noise, grime, deformation, wear, lighting variance—these are the norm, not edge cases. That’s why many ML inspection systems degrade in the real world and require constant tuning, retraining, and exception handling.",
-          "SEN recognizes structure, not appearance. Deterministic identification of part markings and serials stays consistent across worn parts, noisy images, supplier variance, and plant-to-plant differences—without retraining when lighting changes or inputs drift over time.",
-          "If your approach collapses the moment reality deviates from training data, you’ll be stuck collecting samples and tuning thresholds forever. SEN computes. While you babysit models, SEN ships reliable inspection that works on day one and keeps working—making fragility obvious and expensive.",
+          "Manufacturing environments punish probabilistic vision: noise, grime, deformation, wear, lighting variance - these are the norm, not edge cases. That’s why many ML inspection systems degrade in the real world and require constant tuning, retraining, and exception handling.",
+          "SEN recognizes structure, not appearance. Deterministic identification of part markings and serials stays consistent across worn parts, noisy images, supplier variance, and plant-to-plant differences - without retraining when lighting changes or inputs drift over time.",
+          "If your approach collapses the moment reality deviates from training data, you’ll be stuck collecting samples and tuning thresholds forever. SEN computes. While you babysit models, SEN ships reliable inspection that works on day one and keeps working - making fragility obvious and expensive.",
         ],
       },
     ],
@@ -75,7 +75,7 @@ const modalContent: Record<string, IndustryModalContent> = {
         heading: "Healthcare",
         paragraphs: [
           "Healthcare demands stability. Clinical workflows can’t afford interpretive drift, black-box behavior, or silent changes that force re-validation. If your system interprets the same visual input differently today than it did six months ago, you already have a compliance problem.",
-          "SEN introduces deterministic interpretation into visual pipelines that currently rely on probabilistic systems ill-suited for medical accountability. The same scan, form, or symbol produces the same output every time—supporting safer automation, reproducible validation, and audit-friendly clinical tooling.",
+          "SEN introduces deterministic interpretation into visual pipelines that currently rely on probabilistic systems ill-suited for medical accountability. The same input produces the same output every time - supporting safer automation, reproducible validation, and audit-friendly clinical tooling.",
           "If your solution requires periodic retraining, you are forcing customers into endless re-validation and approval cycles. You cannot fake determinism with neural networks, and regulated buyers will see that immediately. SEN ends that loop.",
         ],
       },
@@ -89,7 +89,7 @@ const modalContent: Record<string, IndustryModalContent> = {
         heading: "Media & Entertainment",
         paragraphs: [
           "Media pipelines break when recognition behavior changes across styles, resolutions, and devices. At scale, inconsistency becomes operational drag: rework, false flags, and unreliable automation in moderation, asset tracking, and rights enforcement.",
-          "SEN recognizes structure, not styling—so outputs stay consistent across formats, rendering pipelines, and platform constraints. That predictability is what makes automation trustworthy and scalable in modern content operations.",
+          "SEN recognizes structure, not styling - so outputs stay consistent across formats, rendering pipelines, and platform constraints. That predictability is what makes automation trustworthy and scalable in modern content operations.",
           "Style-sensitive models will never fully win here. SEN is built for invariance, and invariance is what large-scale media pipelines ultimately pay for.",
         ],
       },
@@ -102,9 +102,9 @@ const modalContent: Record<string, IndustryModalContent> = {
       {
         heading: "Retail",
         paragraphs: [
-          "Retail lives and dies on consistency across channels. When in-store systems disagree with online systems, reconciliation overhead explodes, fraud surfaces, and customer trust erodes—especially at scale across devices, kiosks, and backends.",
-          "SEN delivers identical interpretation everywhere: same input, same output across stores, devices, and environments—without retraining per device class or deployment context. That means fewer discrepancies, less operational drift, and cleaner omnichannel execution.",
-          "If your system behaves differently in different contexts, retailers will find it instantly—and they won’t tolerate it. Determinism isn’t a nice-to-have at scale. SEN has it. Most stacks don’t.",
+          "Retail lives and dies on consistency across channels. When in-store systems disagree with online systems, reconciliation overhead explodes, fraud surfaces, and customer trust erodes - especially at scale across devices, kiosks, and backends.",
+          "SEN delivers identical interpretation everywhere: same input, same output across stores, devices, and environments - without retraining per device class or deployment context. That means fewer discrepancies, less operational drift, and cleaner omnichannel execution.",
+          "If your system behaves differently in different contexts, retailers will find it instantly - and they won’t tolerate it. Determinism isn’t a nice-to-have at scale. SEN has it. Most stacks don’t.",
         ],
       },
     ],
@@ -116,9 +116,9 @@ const modalContent: Record<string, IndustryModalContent> = {
       {
         heading: "Telecom",
         paragraphs: [
-          "Telecom infrastructure depends on exact interpretation of diagrams and visual identifiers. Errors propagate into outages, misconfigurations, and regulatory exposure—meaning “pretty accurate” recognition isn’t good enough when networks are on the line.",
-          "SEN provides deterministic understanding of network visuals, enabling safer planning, automation, and operations with repeatable outcomes across teams, tools, and time. That reduces operational risk and simplifies coordination across engineering organizations.",
-          "Inference-based systems can’t guarantee correctness where failure is expensive. Telecom buyers don’t want probabilities—they want repeatability. SEN is infrastructure-grade; guesswork isn’t.",
+          "Telecom infrastructure depends on exact interpretation of compliance codes and visual identifiers. Errors propagate into outages, misconfigurations, and regulatory exposure - meaning “pretty accurate” recognition isn’t good enough when networks are on the line.",
+          "SEN provides deterministic understanding of visual inputs, enabling safer planning, automation, and operations with repeatable outcomes across teams, tools, and time. That reduces operational risk and simplifies coordination across engineering organizations.",
+          "Inference-based systems can’t guarantee correctness where failure is expensive. Telecom buyers don’t want probabilities - they want repeatability. SEN is infrastructure-grade; guesswork isn’t.",
         ],
       },
     ],
@@ -130,7 +130,7 @@ const modalContent: Record<string, IndustryModalContent> = {
       {
         heading: "Energy & Utilities",
         paragraphs: [
-          "Energy infrastructure operates under zero-tolerance conditions. Visual misinterpretation can trigger safety incidents, outages, and regulatory disaster. In these environments, unpredictability is not innovation—it is risk.",
+          "Energy infrastructure operates under zero-tolerance conditions. Visual misinterpretation can trigger safety incidents, outages, and regulatory disaster. In these environments, unpredictability is not innovation - it is risk.",
           "SEN’s deterministic recognition is designed for safety-critical pipelines where identical interpretation must hold across time, deployments, and audit cycles. Predictability becomes a safety feature and a compliance advantage.",
           "Probabilistic tools can’t offer guarantees when consequences are severe. As the market hardens around accountability, systems that can’t prove repeatability will be replaced by ones that can.",
         ],
@@ -158,7 +158,7 @@ const cards: IndustryCard[] = [
     id: "aerospace-defense",
     title: "Aerospace & Defense",
     description:
-        "Deterministic recognition of symbols, markings, and schematics for safety-critical and classified systems.",
+        "Deterministic recognition for safety-critical and classified systems.",
     href: "#aerospace-defense",
     icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -173,7 +173,7 @@ const cards: IndustryCard[] = [
     id: "financial-services",
     title: "Financial Services",
     description:
-        "Exact, auditable recognition of forms, signatures, and stamps to meet regulatory and compliance requirements.",
+        "Exact, auditable recognition of forms, fields, and document markings to meet regulatory and compliance requirements.",
     href: "#financial-services",
     icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -245,7 +245,7 @@ const cards: IndustryCard[] = [
     id: "telecom",
     title: "Telecom",
     description:
-        "Exact interpretation of network diagrams and visual identifiers used in infrastructure planning and operations.",
+        "Exact interpretation of compliance codes and visual identifiers used in infrastructure planning and operations.",
     href: "#telecom",
     icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
@@ -347,7 +347,7 @@ export default function Industries() {
       <>
         <section className="page industries-page">
           <header className="industries-header">
-            <h1>Products built for how your industry works</h1>
+            <h1>Recognition built for how your industry works</h1>
           </header>
 
           <div className="industries-grid">
