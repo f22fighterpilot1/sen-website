@@ -15,6 +15,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Store from "./pages/Store";
+import DeploymentInquiry from "./pages/DeploymentInquiry";
 
 // ✅ Standalone portal pages (NO Layout)
 import LicensingPortal from "./pages/portal/LicensingPortal";
@@ -41,6 +42,11 @@ export default function App() {
                     <Route path="/support" element={<Support />} />
                     <Route path="/industries" element={<Industries />} />
                     <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/pricing/api-access" element={<DeploymentInquiry deployment="api-access" />} />
+                    <Route path="/pricing/lightweight-sdk" element={<DeploymentInquiry deployment="lightweight-sdk" />} />
+                    <Route path="/pricing/container-deployment" element={<DeploymentInquiry deployment="container-deployment" />} />
+                    <Route path="/pricing/embedded-sdk" element={<DeploymentInquiry deployment="embedded-sdk" />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/create-account" element={<CreateAccount />} />

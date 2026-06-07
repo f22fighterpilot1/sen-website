@@ -129,7 +129,7 @@ export default function Home() {
             <div className="home2-section home2-pipeline-section">
                 <div className="home2-section-grid">
                     <div>
-                        <h2 className="home2-h2">Recognition Pipeline</h2>
+                        <h2 className="home2-h2">Recognition pipeline</h2>
                         <p className="home2-p">SEN's fully conscious decision layer processes images while providing teams extensive and precise evidence for the most critical projects.</p>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ export default function HowItWorks() {
         {/* UNDER THE HOOD — FULL-BLEED, CENTERED */}
         <section className="hiw-underhood-band">
           <div className="hiw-underhood-inner">
-            <h2 className="hiw-title">Under the Hood</h2>
+            <h2 className="hiw-title">Under the hood</h2>
 
             <p className="home2-p">
               A huge advancement in computer vision, SEN extracts structure, normalizes geometry, encodes invariants, and performs precise
@@ -107,26 +107,40 @@ export default function HowItWorks() {
         </section>
 
         {/* BAND 3 — TEXT ONLY */}
-        <section className="hiw-section">
+        <section className="hiw-section hiw-standardize-section">
           <div className="container">
             <div className="hiw-copy">
-              <h2 className="hiw-title">Standardize Recognition and Verification</h2>
+              <h2 className="hiw-title">Standardize recognition and verification</h2>
               <p className="home2-p">
-                Recognition behaves the same everywhere. Local tests and production match.
+                Recognition behaves the same everywhere.
                 What you validate is what you deploy.
               </p>
             </div>
           </div>
         </section>
-
+        {/* BAR CHART */}
+        <section className="hiw-chart-section">
+          <div className="container">
+            <img
+                src="/media/images/bar3.png"
+                alt="SEN recognition and verification chart"
+                className="hiw-chart-image"
+            />
+          </div>
+        </section>
         {/* BAND 4 — TEXT ONLY */}
         <section className="hiw-section">
           <div className="container">
             <div className="hiw-copy">
-              <h2 className="hiw-title">Collaborate with Confidence</h2>
+              <h2 className="hiw-title">Collaborate with confidence</h2>
               <p className="home2-p">
-                Templates and rules are explicit. Changes can be reviewed and tested.
-                No silent behavior changes.
+                <ul className="tutorial-bullets check-bullets">
+                  <li>Templates and rules are explicit</li>
+                  <li>Teams can see exactly what changed</li>
+                  <li>Every change can be reviewed, tested, and approved</li>
+                  <li>Recognition behavior stays traceable</li>
+                  <li>No silent behavior changes</li>
+                </ul>
               </p>
             </div>
           </div>
@@ -137,9 +151,9 @@ export default function HowItWorks() {
           <div className="container">
             <div className="hiw-grid">
               <div className="hiw-copy">
-                <h2 className="hiw-title">Next Steps</h2>
+                <h2 className="hiw-title">Next steps</h2>
                 <p className="home2-p">
-                  Integrate via API, SDK, or container. Start recognizing symbols immediately. Enable verification as needed.
+                  Seamlessly integrate via API, SDK, or container. Start recognizing symbols immediately.
                 </p>
 
                 <div className="hiw-actions">
