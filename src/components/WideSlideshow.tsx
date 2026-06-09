@@ -76,6 +76,7 @@ export default function WideSlideshow() {
                 {SLIDES.map((_, i) => (
                     <button
                         key={i}
+                        type="button"
                         className={`wide-slideshow-dot ${i === index ? "is-active" : ""}`}
                         onClick={() => setIndex(i)}
                         aria-label={`Go to slide ${i + 1}`}

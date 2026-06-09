@@ -19,6 +19,7 @@ export default function HowItWorks() {
                     className="hiw-video"
                     controls
                     playsInline
+                    autoPlay
                     preload="metadata"
                 >
                   <source src="/media/videos/sen-final-demo.mp4" type="video/mp4" />
@@ -34,8 +35,7 @@ export default function HowItWorks() {
                   SymbolicEngine performs deterministic symbol recognition and verification.
                   Given the same input, the output is identical - an enormous advantage.
                 </p>
-
-                <ul className="tutorial-bullets">
+                <ul className="tutorial-bullets check-bullets">
                   <li>Deterministic recognition and scoring</li>
                   <li>Repeatable results across environments</li>
                   <li>Explicit confidence</li>

@@ -3476,3 +3476,110 @@
     font-size: 1.3em;
     font-weight: 900;
 }
+
+/* FINAL MOBILE FIX — WideSlideshow */
+@media (max-width: 900px) {
+    .wide-slideshow {
+        width: auto;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 48px 0;
+        overflow: hidden;
+    }
+
+    .wide-slideshow-inner {
+        width: 100%;
+        max-width: none;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .wide-slideshow-card {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        align-items: stretch;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .wide-slideshow-left,
+    .wide-slideshow-right {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .wide-slideshow-left {
+        display: grid;
+        gap: 14px;
+    }
+
+    .wide-slideshow-logo {
+        width: 100%;
+        max-width: none;
+        white-space: normal;
+        text-align: left;
+        margin: 0;
+    }
+
+    .wide-slideshow-image-frame {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+    }
+
+    .wide-slideshow-image-frame .wide-slideshow-left-img,
+    .wide-slideshow-left-img,
+    .wide-slideshow-card img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .wide-slideshow-right {
+        display: block;
+    }
+
+    .wide-slideshow-quote {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        font-size: clamp(1rem, 4vw, 1.2rem);
+        line-height: 1.55;
+        text-align: left;
+    }
+
+    .wide-slideshow-dots {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .wide-slideshow {
+        padding: 40px 0;
+    }
+
+    .wide-slideshow-inner {
+        padding: 0 16px;
+    }
+
+    .wide-slideshow-card {
+        gap: 20px;
+    }
+
+    .wide-slideshow-image-frame {
+        aspect-ratio: 4 / 3;
+    }
+}
