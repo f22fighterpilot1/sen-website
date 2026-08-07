@@ -4,7 +4,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./pages/Home";
 import Demo from "./pages/Demo";
-import HowItWorks from "./pages/HowItWorks";
+import About from "./pages/About.tsx";
 import Industries from "./pages/Industries";
 import Pricing from "./pages/Pricing";
 import Support from "./pages/Support";
@@ -16,6 +16,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Store from "./pages/Store";
 import DeploymentInquiry from "./pages/DeploymentInquiry";
+import { Analytics } from '@vercel/analytics/react';
+
 
 // ✅ Standalone portal pages (NO Layout)
 import LicensingPortal from "./pages/portal/LicensingPortal";
@@ -38,7 +40,7 @@ export default function App() {
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
                     <Route path="/demo" element={<Demo />} />
-                    <Route path="/how-it-works" element={<HowItWorks />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/support" element={<Support />} />
                     <Route path="/industries" element={<Industries />} />
                     <Route path="/pricing" element={<Pricing />} />
@@ -56,6 +58,7 @@ export default function App() {
                     <Route path="/store" element={<Store />} />
                 </Route>
             </Routes>
+            <Analytics />
         </>
     );
 }

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/how-it-works", label: "How it works" },
+  { to: "/about", label: "About" },
   { to: "/industries", label: "Industries" },
   { to: "/pricing", label: "Pricing" },
   { to: "/support", label: "Contact Us" },

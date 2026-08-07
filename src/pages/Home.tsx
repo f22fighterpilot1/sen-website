@@ -40,8 +40,8 @@ export default function Home() {
                                 <NavLink to="/support" className="btn btn-primary">
                                     Request demo
                                 </NavLink>
-                                <NavLink to="/how-it-works" className="btn">
-                                    How it works →
+                                <NavLink to="/about" className="btn">
+                                    About →
                                 </NavLink>
                             </p>
                         </div>

@@ -1,36 +1,35 @@
 import { NavLink } from "react-router-dom";
 
-export default function HowItWorks() {
+export default function About() {
   return (
       <section className="hiw">
         {/* PAGE HEADER */}
         <div className="container">
-          <header className="hiw-head">
-            <h1>What is SymbolicEngine?</h1>
-          </header>
+          {/*<header className="hiw-head">*/}
+          {/*  <h1>What is SymbolicEngine?</h1>*/}
+          {/*</header>*/}
         </div>
 
         {/* BAND 1 — Image left, copy right */}
         <section className="hiw-section">
           <div className="container">
             <div className="hiw-grid">
-              <div className="hiw-media">
-                <video
-                    className="hiw-video"
-                    controls
-                    playsInline
-                    autoPlay
-                    preload="metadata"
-                >
-                  <source src="/media/videos/sen-final-demo.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-
+              {/*<div className="hiw-media">*/}
+              {/*  <video*/}
+              {/*      className="hiw-video"*/}
+              {/*      controls*/}
+              {/*      playsInline*/}
+              {/*      autoPlay*/}
+              {/*      preload="metadata"*/}
+              {/*  >*/}
+              {/*    <source src="/media/videos/sen-final-demo.mp4" type="video/mp4" />*/}
+              {/*    Your browser does not support the video tag.*/}
+              {/*  </video>*/}
+              {/*</div>*/}
               <div className="hiw-copy">
-                <h2 className="hiw-title">
+                <h1 className="hiw-title">
                   Deterministic <span className="nowrap">symbol recognition</span>
-                </h2>
+                </h1>
                 <p className="hiw-body">
                   SymbolicEngine performs deterministic symbol recognition and verification.
                   Given the same input, the output is identical - an enormous advantage.

@@ -21,7 +21,7 @@ export default function Footer() {
             `Source: Website footer`,
         ].join("\n");
 
-        const mailto = `mailto:drew@symbolicengine.ai?subject=${encodeURIComponent(
+        const mailto = `mailto:contact@symbolicengine.ai?subject=${encodeURIComponent(
             subject
         )}&body=${encodeURIComponent(body)}`;
 

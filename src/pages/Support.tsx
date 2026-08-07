@@ -95,7 +95,7 @@ export default function Support() {
       form.comments || "(none)",
     ].join("\n");
 
-    const mailto = `mailto:drew@symbolicengine.ai?subject=${encodeURIComponent(
+    const mailto = `mailto:contact@symbolicengine.ai?subject=${encodeURIComponent(
         subject
     )}&body=${encodeURIComponent(body)}`;
 
@@ -270,7 +270,7 @@ export default function Support() {
             information for support and product communications.
           </p>
           <p>
-            Email: <strong>drew@symbolicengine.ai</strong>
+            Email: <strong>contact@symbolicengine.ai</strong>
           </p>
 
           <button className="btn btn-primary support-submit" type="submit">

@@ -62,7 +62,7 @@ const PRODUCTS: Product[] = [
       "Operational hardening guidance",
     ],
     ctaLabel: "Request a demo →",
-    ctaTo: "/how-it-works",
+    ctaTo: "/about",
   },
   {
     id: "audit-pack",

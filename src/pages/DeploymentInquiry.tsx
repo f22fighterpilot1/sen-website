@@ -149,7 +149,7 @@ export default function DeploymentInquiry({ deployment }: Props) {
             form.question || "(none)",
         ].join("\n");
 
-        window.location.href = `mailto:drew@symbolicengine.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:contact@symbolicengine.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 
     return (

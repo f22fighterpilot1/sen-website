@@ -24,11 +24,7 @@ export default function Login() {
               >
                 Request access
               </button>
-
-              <p className="auth-foot">
-                Prefer email? <strong>drew@symbolicengine.ai</strong>
-              </p>
-
+              
               <p className="auth-foot">
                 Looking for a demo?{" "}
                 <NavLink to="/support" className="auth-link">
