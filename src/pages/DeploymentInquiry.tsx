@@ -254,7 +254,7 @@ export default function DeploymentInquiry({ deployment }: Props) {
                                 {submitted && errors.contactOk && <em>{errors.contactOk}</em>}
                             </label>
 
-                            <button className="deployment-submit" type="submit">
+                            <button className="deployment-submit" type="submit" disabled={true}>
                                 Submit your request
                             </button>
                         </form>

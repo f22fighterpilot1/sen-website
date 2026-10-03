@@ -208,8 +208,8 @@ export default function TermsOfService() {
         </p>
         <p>
           <strong>SymbolicEngine, Inc.</strong>
-          Email:{" "}
-          <a href="mailto:legal@symbolicengine.ai">legal@symbolicengine.ai</a>
+          {/*Email:{" "}*/}
+          {/*<a href="mailto:legal@symbolicengine.ai">legal@symbolicengine.ai</a>*/}
         </p>
       </div>
     </section>

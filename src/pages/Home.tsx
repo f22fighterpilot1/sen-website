@@ -28,9 +28,9 @@ export default function Home() {
                         <h1>
                             The world’s first
                             <br />
-                            deterministic AI
+                            deterministic infrastructure
                             <br />
-                            for precise vision.
+                            for visual evidence.
                         </h1>
 
                         <div className="home2-cta">

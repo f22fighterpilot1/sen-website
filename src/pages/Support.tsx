@@ -270,10 +270,10 @@ export default function Support() {
             information for support and product communications.
           </p>
           <p>
-            Email: <strong>contact@symbolicengine.ai</strong>
+            {/*Email: <strong>contact@symbolicengine.ai</strong>*/}
           </p>
 
-          <button className="btn btn-primary support-submit" type="submit">
+          <button className="btn btn-primary support-submit" type="submit" disabled={true}>
             Submit
           </button>
         </form>

@@ -50,7 +50,7 @@ export default function Footer() {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                   />
-                  <button className="btn btn-primary" type="submit">
+                  <button className="btn btn-primary" type="submit" disabled={true}>
                     Subscribe
                   </button>
                 </form>

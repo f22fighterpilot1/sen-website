@@ -137,14 +137,14 @@ export default function PrivacyPolicy() {
           prominently.
         </p>
 
-        <h2>11. Contact</h2>
-        <p>
-          For privacy-related questions or requests, contact:
-          <br />
-          <strong>SymbolicEngine, Inc.</strong>
-          <br />
-          Email: <a href="mailto:privacy@symbolicengine.ai">privacy@symbolicengine.ai</a>
-        </p>
+        {/*<h2>11. Contact</h2>*/}
+        {/*<p>*/}
+        {/*  For privacy-related questions or requests, contact:*/}
+        {/*  <br />*/}
+        {/*  <strong>SymbolicEngine, Inc.</strong>*/}
+        {/*  <br />*/}
+        {/*  Email: <a href="mailto:privacy@symbolicengine.ai">privacy@symbolicengine.ai</a>*/}
+        {/*</p>*/}
       </div>
     </section>
   );
