@@ -4,34 +4,81 @@ import { useState } from "react";
 export default function Footer() {
     const [email, setEmail] = useState("");
     const [optIn, setOptIn] = useState(true);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState("");
+    const [submitted, setSubmitted] = useState(false);
 
-    const onSubscribe = (e: React.FormEvent) => {
+    const onSubscribe = async (e: React.FormEvent) => {
         e.preventDefault();
 
         const cleanEmail = email.trim();
+
         if (!cleanEmail) return;
 
-        const subject = "SymbolicEngine News Signup";
-        const body = [
-            `Please add this email to SymbolicEngine news/updates:`,
-            ``,
-            `Email: ${cleanEmail}`,
-            `Opt-in: ${optIn ? "Yes" : "No"}`,
-            ``,
-            `Source: Website footer`,
-        ].join("\n");
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+            setSubmitError("Please enter a valid email address.");
+            return;
+        }
 
-        const mailto = `mailto:contact@symbolicengine.ai?subject=${encodeURIComponent(
-            subject
-        )}&body=${encodeURIComponent(body)}`;
+        if (!optIn) {
+            setSubmitError("Please confirm that you want to receive SymbolicEngine news.");
+            return;
+        }
 
-        window.location.href = mailto;
+        setIsSubmitting(true);
+        setSubmitError("");
+        setSubmitted(false);
+
+        try {
+            const response = await fetch("/api/subscribe", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: cleanEmail,
+                    optIn,
+                }),
+            });
+
+            const text = await response.text();
+
+            let result: { error?: string; message?: string } = {};
+
+            if (text) {
+                try {
+                    result = JSON.parse(text);
+                } catch {
+                    throw new Error(`Server error (${response.status}).`);
+                }
+            }
+
+            if (!response.ok) {
+                throw new Error(
+                    result.error || "We couldn't submit your subscription request."
+                );
+            }
+
+            setSubmitted(true);
+            setEmail("");
+        } catch (error) {
+            console.error("Newsletter subscription failed:", error);
+
+            setSubmitError(
+                error instanceof Error
+                    ? error.message
+                    : "We couldn't submit your subscription request."
+            );
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
         <footer className="footer">
             <div className="footer-inner">
                 <span className="footer-left" aria-hidden />
+
                 <span className="footer-center">
           <section className="section subscribe">
             <div className="container subscribe-inner">
@@ -50,8 +97,13 @@ export default function Footer() {
                       onChange={(e) => setEmail(e.target.value)}
                       required
                   />
-                  <button className="btn btn-primary" type="submit" disabled={true}>
-                    Subscribe
+
+                  <button
+                      className="btn btn-primary"
+                      type="submit"
+                      disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Subscribing..." : "Subscribe"}
                   </button>
                 </form>
 
@@ -65,11 +117,24 @@ export default function Footer() {
                     Send me news about SymbolicEngine products, releases, and events.
                   </span>
                 </label>
+
+                  {submitError && (
+                      <div className="support-error" role="alert">
+                          {submitError}
+                      </div>
+                  )}
+
+                  {submitted && (
+                      <div className="subscribe-success" role="status">
+                          Thanks. Your subscription request has been received.
+                      </div>
+                  )}
               </div>
 
               <p className="subscribe-disclaimer">
-                By submitting this form, you acknowledge and agree that SymbolicEngine will
-                process your personal information in accordance with the{" "}
+                By submitting this form, you acknowledge and agree that
+                SymbolicEngine will process your personal information in
+                accordance with the{" "}
                   <NavLink to="/privacy" className="footer-link">
                   Privacy Policy
                 </NavLink>
