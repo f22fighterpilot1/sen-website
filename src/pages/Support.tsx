@@ -91,7 +91,6 @@ const COUNTRIES = [
   "Haiti",
   "Holy See (Vatican City)",
   "Honduras",
-  "Hungary",
   "Iceland",
   "India",
   "Indonesia",
@@ -107,7 +106,6 @@ const COUNTRIES = [
   "Kenya",
   "Kiribati",
   "Kuwait",
-  "Kyrgyzstan",
   "Laos",
   "Latvia",
   "Lebanon",
@@ -175,7 +173,6 @@ const COUNTRIES = [
   "Singapore",
   "Slovakia",
   "Slovenia",
-  "Solomon Islands",
   "Somalia",
   "South Africa",
   "South Korea",
@@ -225,6 +222,9 @@ export default function Support() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
   const [errors, setErrors] = useState<ErrorState>({});
 
   const setField = <K extends keyof FormState>(
@@ -233,13 +233,16 @@ export default function Support() {
   ) => {
     setForm((prev) => ({ ...prev, [key]: value }));
 
-    // Clear error as user fixes it (after first submit attempt)
     if (submitted) {
       setErrors((prev) => {
         const next = { ...prev };
         delete next[key];
         return next;
       });
+    }
+
+    if (submitError) {
+      setSubmitError("");
     }
   };
 
@@ -253,6 +256,7 @@ export default function Support() {
       "company",
       "phone",
       "country",
+      "comments",
     ];
 
     for (const k of req) {
@@ -261,7 +265,6 @@ export default function Support() {
       }
     }
 
-    // Basic email format check
     if (
       form.email.trim() &&
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())
@@ -272,16 +275,50 @@ export default function Support() {
     return next;
   };
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     setSubmitted(true);
+    setSubmitError("");
 
     const nextErrors = validate();
     setErrors(nextErrors);
 
-    if (Object.keys(nextErrors).length > 0) return;
+    if (Object.keys(nextErrors).length > 0) {
+      return;
+    }
 
-    navigate("/thank-you");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/support", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result?.error || "We couldn't submit your request."
+        );
+      }
+
+      navigate("/thank-you");
+    } catch (error) {
+      console.error("Support form submission failed:", error);
+
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "We couldn't submit your request. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -448,9 +485,12 @@ export default function Support() {
 
         {/* Comments */}
         <div className="support-field">
-          <label className="support-label" htmlFor="comments">
-            Comments
-          </label>
+          <div className="support-label-row">
+            <label className="support-label" htmlFor="comments">
+              Comments
+            </label>
+            <span className="support-required">Required</span>
+          </div>
 
           <textarea
             id="comments"
@@ -459,7 +499,12 @@ export default function Support() {
             value={form.comments}
             onChange={(e) => setField("comments", e.target.value)}
             rows={5}
+            required
           />
+
+          {submitted && errors.comments && (
+            <div className="support-error">{errors.comments}</div>
+          )}
         </div>
 
         <p className="support-legal">
@@ -468,14 +513,21 @@ export default function Support() {
           communications.
         </p>
 
-        <p>
-          {/*Email: <strong>contact@symbolicengine.ai</strong>*/}
-        </p>
+        {submitError && (
+          <div className="support-error" role="alert">
+            {submitError}
+          </div>
+        )}
 
-        <button className="btn btn-primary support-submit" type="submit">
-          Submit
+        <button
+          className="btn btn-primary support-submit"
+          type="submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
     </section>
   );
 }
+
