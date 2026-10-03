@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type FormState = {
   firstName: string;
@@ -14,16 +15,205 @@ type ErrorState = Partial<Record<keyof FormState, string>>;
 
 const COUNTRIES = [
   "United States",
-  "Canada",
   "United Kingdom",
-  "Germany",
-  "France",
+  "Canada",
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
   "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cabo Verde",
+  "Cambodia",
+  "Cameroon",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo (Republic of the)",
+  "Costa Rica",
+  "Côte d’Ivoire",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czechia",
+  "Democratic Republic of the Congo",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Eswatini",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Holy See (Vatican City)",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
   "Japan",
-  "Other",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "North Korea",
+  "North Macedonia",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Palestine, State of",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "South Korea",
+  "South Sudan",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Timor-Leste",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Türkiye",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
 ];
 
 export default function Support() {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState<FormState>({
     firstName: "",
     lastName: "",
@@ -37,7 +227,10 @@ export default function Support() {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<ErrorState>({});
 
-  const setField = <K extends keyof FormState>(key: K, value: FormState[K]) => {
+  const setField = <K extends keyof FormState>(
+    key: K,
+    value: FormState[K]
+  ) => {
     setForm((prev) => ({ ...prev, [key]: value }));
 
     // Clear error as user fixes it (after first submit attempt)
@@ -63,11 +256,16 @@ export default function Support() {
     ];
 
     for (const k of req) {
-      if (!String(form[k]).trim()) next[k] = "This field is required.";
+      if (!String(form[k]).trim()) {
+        next[k] = "This field is required.";
+      }
     }
 
     // Basic email format check
-    if (form.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+    if (
+      form.email.trim() &&
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())
+    ) {
       next.email = "Please enter a valid email address.";
     }
 
@@ -83,200 +281,201 @@ export default function Support() {
 
     if (Object.keys(nextErrors).length > 0) return;
 
-    const subject = `SEN Demo Request — ${form.company}`;
-    const body = [
-      `Name: ${form.firstName} ${form.lastName}`,
-      `Email: ${form.email}`,
-      `Company: ${form.company}`,
-      `Phone: ${form.phone}`,
-      `Country: ${form.country}`,
-      ``,
-      `Comments:`,
-      form.comments || "(none)",
-    ].join("\n");
-
-    const mailto = `mailto:contact@symbolicengine.ai?subject=${encodeURIComponent(
-        subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailto;
+    navigate("/thank-you");
   };
 
   return (
-      <section className="page support-page">
-        <header className="support-header">
-          <h1>Contact support</h1>
-          <p className="support-sub">
-            Tell us what you’re trying to do. We’ll respond with a deterministic next step.
-          </p>
-        </header>
+    <section className="page support-page">
+      <header className="support-header">
+        <h1>Contact support</h1>
+        <p className="support-sub">
+          Tell us what you’re trying to do. We’ll respond with a deterministic
+          next step.
+        </p>
+      </header>
 
-        <form className="support-form" onSubmit={onSubmit} noValidate>
-          {/* Row: First / Last */}
-          <div className="support-row">
-            <div className="support-field">
-              <div className="support-label-row">
-                <label className="support-label" htmlFor="firstName">
-                  First Name
-                </label>
-                <span className="support-required">Required</span>
-              </div>
-              <input
-                  id="firstName"
-                  className="support-input"
-                  value={form.firstName}
-                  onChange={(e) => setField("firstName", e.target.value)}
-                  required
-                  autoComplete="given-name"
-              />
-              {submitted && errors.firstName && (
-                  <div className="support-error">{errors.firstName}</div>
-              )}
-            </div>
-
-            <div className="support-field">
-              <div className="support-label-row">
-                <label className="support-label" htmlFor="lastName">
-                  Last Name
-                </label>
-                <span className="support-required">Required</span>
-              </div>
-              <input
-                  id="lastName"
-                  className="support-input"
-                  value={form.lastName}
-                  onChange={(e) => setField("lastName", e.target.value)}
-                  required
-                  autoComplete="family-name"
-              />
-              {submitted && errors.lastName && (
-                  <div className="support-error">{errors.lastName}</div>
-              )}
-            </div>
-          </div>
-
-          {/* Email */}
+      <form className="support-form" onSubmit={onSubmit} noValidate>
+        {/* Row: First / Last */}
+        <div className="support-row">
           <div className="support-field">
             <div className="support-label-row">
-              <label className="support-label" htmlFor="email">
-                Business Email
+              <label className="support-label" htmlFor="firstName">
+                First Name
               </label>
               <span className="support-required">Required</span>
             </div>
+
             <input
-                id="email"
-                type="email"
-                className="support-input"
-                value={form.email}
-                onChange={(e) => setField("email", e.target.value)}
-                required
-                autoComplete="email"
-                inputMode="email"
+              id="firstName"
+              className="support-input"
+              value={form.firstName}
+              onChange={(e) => setField("firstName", e.target.value)}
+              required
+              autoComplete="given-name"
             />
-            {submitted && errors.email && (
-                <div className="support-error">{errors.email}</div>
+
+            {submitted && errors.firstName && (
+              <div className="support-error">{errors.firstName}</div>
             )}
           </div>
 
-          {/* Company */}
           <div className="support-field">
             <div className="support-label-row">
-              <label className="support-label" htmlFor="company">
-                Company
+              <label className="support-label" htmlFor="lastName">
+                Last Name
               </label>
               <span className="support-required">Required</span>
             </div>
+
             <input
-                id="company"
-                className="support-input"
-                value={form.company}
-                onChange={(e) => setField("company", e.target.value)}
-                required
-                autoComplete="organization"
+              id="lastName"
+              className="support-input"
+              value={form.lastName}
+              onChange={(e) => setField("lastName", e.target.value)}
+              required
+              autoComplete="family-name"
             />
-            {submitted && errors.company && (
-                <div className="support-error">{errors.company}</div>
+
+            {submitted && errors.lastName && (
+              <div className="support-error">{errors.lastName}</div>
             )}
           </div>
+        </div>
 
-          {/* Phone */}
-          <div className="support-field">
-            <div className="support-label-row">
-              <label className="support-label" htmlFor="phone">
-                Phone
-              </label>
-              <span className="support-required">Required</span>
-            </div>
-            <input
-                id="phone"
-                className="support-input"
-                value={form.phone}
-                onChange={(e) => setField("phone", e.target.value)}
-                required
-                autoComplete="tel"
-                inputMode="tel"
-            />
-            {submitted && errors.phone && (
-                <div className="support-error">{errors.phone}</div>
-            )}
-          </div>
-
-          {/* Country */}
-          <div className="support-field">
-            <div className="support-label-row">
-              <label className="support-label" htmlFor="country">
-                Country
-              </label>
-              <span className="support-required">Required</span>
-            </div>
-            <select
-                id="country"
-                className="support-select"
-                value={form.country}
-                onChange={(e) => setField("country", e.target.value)}
-                required
-            >
-              <option value="" disabled>
-                Select...
-              </option>
-              {COUNTRIES.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-              ))}
-            </select>
-            {submitted && errors.country && (
-                <div className="support-error">{errors.country}</div>
-            )}
-          </div>
-
-          {/* Comments */}
-          <div className="support-field">
-            <label className="support-label" htmlFor="comments">
-              Comments
+        {/* Email */}
+        <div className="support-field">
+          <div className="support-label-row">
+            <label className="support-label" htmlFor="email">
+              Business Email
             </label>
-            <textarea
-                id="comments"
-                className="support-textarea"
-                placeholder="I'd like to learn more about..."
-                value={form.comments}
-                onChange={(e) => setField("comments", e.target.value)}
-                rows={5}
-            />
+            <span className="support-required">Required</span>
           </div>
 
-          <p className="support-legal">
-            By submitting this form, you acknowledge and agree that SymbolicEngine will process your
-            information for support and product communications.
-          </p>
-          <p>
-            {/*Email: <strong>contact@symbolicengine.ai</strong>*/}
-          </p>
+          <input
+            id="email"
+            type="email"
+            className="support-input"
+            value={form.email}
+            onChange={(e) => setField("email", e.target.value)}
+            required
+            autoComplete="email"
+            inputMode="email"
+          />
 
-          <button className="btn btn-primary support-submit" type="submit" disabled={true}>
-            Submit
-          </button>
-        </form>
-      </section>
+          {submitted && errors.email && (
+            <div className="support-error">{errors.email}</div>
+          )}
+        </div>
+
+        {/* Company */}
+        <div className="support-field">
+          <div className="support-label-row">
+            <label className="support-label" htmlFor="company">
+              Company
+            </label>
+            <span className="support-required">Required</span>
+          </div>
+
+          <input
+            id="company"
+            className="support-input"
+            value={form.company}
+            onChange={(e) => setField("company", e.target.value)}
+            required
+            autoComplete="organization"
+          />
+
+          {submitted && errors.company && (
+            <div className="support-error">{errors.company}</div>
+          )}
+        </div>
+
+        {/* Phone */}
+        <div className="support-field">
+          <div className="support-label-row">
+            <label className="support-label" htmlFor="phone">
+              Phone
+            </label>
+            <span className="support-required">Required</span>
+          </div>
+
+          <input
+            id="phone"
+            className="support-input"
+            value={form.phone}
+            onChange={(e) => setField("phone", e.target.value)}
+            required
+            autoComplete="tel"
+            inputMode="tel"
+          />
+
+          {submitted && errors.phone && (
+            <div className="support-error">{errors.phone}</div>
+          )}
+        </div>
+
+        {/* Country */}
+        <div className="support-field">
+          <div className="support-label-row">
+            <label className="support-label" htmlFor="country">
+              Country
+            </label>
+            <span className="support-required">Required</span>
+          </div>
+
+          <select
+            id="country"
+            className="support-select"
+            value={form.country}
+            onChange={(e) => setField("country", e.target.value)}
+            required
+          >
+            <option value="" disabled>
+              Select...
+            </option>
+
+            {COUNTRIES.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+
+          {submitted && errors.country && (
+            <div className="support-error">{errors.country}</div>
+          )}
+        </div>
+
+        {/* Comments */}
+        <div className="support-field">
+          <label className="support-label" htmlFor="comments">
+            Comments
+          </label>
+
+          <textarea
+            id="comments"
+            className="support-textarea"
+            placeholder="I'd like to learn more about..."
+            value={form.comments}
+            onChange={(e) => setField("comments", e.target.value)}
+            rows={5}
+          />
+        </div>
+
+        <p className="support-legal">
+          By submitting this form, you acknowledge and agree that
+          SymbolicEngine will process your information for support and product
+          communications.
+        </p>
+
+        <p>
+          {/*Email: <strong>contact@symbolicengine.ai</strong>*/}
+        </p>
+
+        <button className="btn btn-primary support-submit" type="submit">
+          Submit
+        </button>
+      </form>
+    </section>
   );
 }

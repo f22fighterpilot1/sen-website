@@ -1921,7 +1921,8 @@
   width: 100%;
   border-radius: 6px;
   border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.03);
+  color: #ffffff;
+  background-color: #171b24;
   color: var(--text);
   padding: 12px 12px;
   outline: none;

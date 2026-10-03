@@ -17,7 +17,7 @@ import TermsOfService from "./pages/TermsOfService";
 import Store from "./pages/Store";
 import DeploymentInquiry from "./pages/DeploymentInquiry";
 import { Analytics } from '@vercel/analytics/react';
-
+import ThankYou from "./pages/ThankYou";
 
 // ✅ Standalone portal pages (NO Layout)
 import LicensingPortal from "./pages/portal/LicensingPortal";
@@ -56,6 +56,7 @@ export default function App() {
                     <Route path="/privacy" element={<PrivacyPolicy />} />
                     <Route path="/terms-of-service" element={<TermsOfService />} />
                     <Route path="/store" element={<Store />} />
+                    <Route path="/thank-you" element={<ThankYou />} />
                 </Route>
             </Routes>
             <Analytics />
