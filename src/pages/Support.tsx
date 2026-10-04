@@ -326,8 +326,7 @@ export default function Support() {
       <header className="support-header">
         <h1>Contact support</h1>
         <p className="support-sub">
-          Tell us what you’re trying to do. We’ll respond with a deterministic
-          next step.
+          Tell us what you’re trying to do. We’ll respond with the next steps.
         </p>
       </header>
 
