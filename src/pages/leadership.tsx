@@ -5,7 +5,7 @@ const leaders = [
   {
     name: "Britton Irechukwu",
     title: "Chief Executive Officer",
-    image: "/public/media/images/leadership/placeholder.jpg",
+    image: "/public/media/images/leadership/britton.png",
     bio: "Add the executive's professional background, leadership experience, and contributions to SymbolicEngine.",
   },
   {
