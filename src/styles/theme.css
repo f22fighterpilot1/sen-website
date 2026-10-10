@@ -3589,3 +3589,292 @@
 .hiw .hiw-section:first-of-type {
     padding-top: 20px;
 }
+
+
+/* About navigation dropdown */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  font-size: 0.75em;
+  transition: transform 180ms ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow,
+.nav-dropdown:focus-within .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 190px;
+  padding: 8px;
+  background: #0b1020;
+  border: 1px solid rgba(79, 140, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 6px;
+  color: #c5d4ed;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus-visible {
+  background: rgba(79, 140, 255, 0.13);
+  color: #6da5ff;
+}
+
+
+/* Leadership page */
+
+.leadership-page {
+  padding: 56px 0 80px;
+  color: #f4f7ff;
+  background: transparent;
+}
+
+.leadership-page .container {
+  width: calc(100% - 1px);
+  max-width: none;
+  margin-inline: auto;
+}
+
+/* Heading */
+
+.leadership-header {
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.leadership-header h1 {
+  margin: 0;
+  color: #f4f7ff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.leadership-subtitle {
+  margin: 14px 0 0;
+  color: #b6c5df;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.leadership-accent {
+  width: 52px;
+  height: 3px;
+  margin: 22px auto 0;
+  border-radius: 2px;
+  background: #4f8cff;
+}
+
+/* Three cards per row */
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 24px;
+  align-items: stretch;
+}
+
+/* Cards */
+
+.leadership-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #0b1020;
+  border: 1px solid rgba(133, 164, 219, 0.16);
+  border-radius: 10px;
+  transition: border-color 180ms ease;
+}
+
+.leadership-card:hover {
+  border-color: rgba(79, 140, 255, 0.55);
+}
+
+/* Images */
+
+```css
+.leadership-photo {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid rgba(133, 164, 219, 0.12);
+}
+
+.leadership-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: none;
+}
+```
+
+/*.leadership-card:hover .leadership-photo img {
+  transform: scale(1.02);
+}
+*/
+
+/* Profile information */
+
+.leadership-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.leadership-card-content h2 {
+  margin: 0;
+  color: #f4f7ff;
+  font-size: 1.2rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.leadership-title {
+  margin: 8px 0 22px;
+  color: #9eafd0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* Read Bio link */
+
+.leadership-bio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #75a7ff;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.leadership-bio-link:hover {
+  color: #b2ceff;
+}
+
+.leadership-bio-link:focus-visible {
+  outline: 2px solid #75a7ff;
+  outline-offset: 5px;
+}
+
+.leadership-bio-link span {
+  transition: transform 180ms ease;
+}
+
+.leadership-bio-link:hover span {
+  transform: translateX(3px);
+}
+
+/* Expanded biographies */
+
+.leadership-bio {
+  width: 100%;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(133, 164, 219, 0.18);
+  color: #c0cce1;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .leadership-page {
+    padding: 42px 0 60px;
+  }
+
+  .leadership-page .container {
+    width: calc(100% - 32px);
+  }
+
+  .leadership-header {
+    margin-bottom: 30px;
+  }
+
+  .leadership-header h1 {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+  }
+
+  .leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 24px;
+  align-items: stretch;
+}
+
+  .leadership-photo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .leadership-card-content {
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leadership-card,
+  .leadership-photo img,
+  .leadership-bio-link span {
+    transition: none;
+  }
+}
