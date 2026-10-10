@@ -5,7 +5,7 @@ const leaders = [
   {
     name: "Britton Irechukwu",
     title: "Chief Executive Officer",
-    //image: "/public/media/images/leadership/drew.png",
+    image: "/public/media/images/leadership/placeholder.jpg",
     bio: "Add the executive's professional background, leadership experience, and contributions to SymbolicEngine.",
   },
   {
@@ -47,8 +47,7 @@ export default function Leadership() {
     <main className="leadership-page">
       <div className="container">
         <header className="leadership-header">
-          <h1>Corporate Leadership Team</h1>
-          <p className="leadership-subtitle">Meet the Team</p>
+          <h1>Leadership</h1>
           <div className="leadership-accent" aria-hidden="true" />
         </header>
 
